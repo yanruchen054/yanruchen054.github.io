@@ -315,6 +315,22 @@ a:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.nav-menu ul {
+  display: flex;
+  flex-wrap: nowrap;      /* 禁止换行 */
+  overflow-x: auto;       /* 超出宽度出现横向滚动 */
+  -webkit-overflow-scrolling: touch; /* 移动端平滑滚动 */
+}
+
+.nav-menu li {
+  flex: 0 0 auto;         /* 保持项目宽度自适 */
+}
+
+/* style.css */
+.section {
+  scroll-margin-top: 70px;  /* 留出 header 空间 */
+}
+
 .exp-image img {
   width: 100px;
   height: 100px;
@@ -326,6 +342,53 @@ a:hover {
 .exp-info {
   flex: 1;
 }
+
+/* style.css */
+.edu-item {
+  display: flex;
+  align-items: center;    /* 垂直居中 */
+  background-color: #fff;
+  /* ... 省略已有样式 ... */
+}
+
+.edu-image {
+  display: flex;
+  align-items: center;    /* 垂直居中 */
+  justify-content: center;/* 水平居中 */
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff; /* 统一底色 */
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.edu-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* style.css */
+.presentation-list {
+  counter-reset: pres;      /* 初始化计数器 */
+  list-style: none;         /* 去掉默认圆点 */
+  padding-left: 0;
+}
+
+.presentation-item {
+  counter-increment: pres;  /* 每个 <li> 计数 +1 */
+  margin-bottom: 30px;
+  text-align: left;         /* 统一左对齐 */
+  display: block;           /* 取消 flex 居中 */
+}
+
+.presentation-item h3::before {
+  content: counter(pres) ". "; /* 在标题前插入 “1. ”、“2. ” */
+  color: #007acc;
+  font-weight: bold;
+}
+
 
 .exp-info h3 {
   font-size: 1rem;

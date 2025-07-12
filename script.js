@@ -13,3 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
      localStorage.setItem("cookieAccepted", "yes");
   });
 });
+
+// script.js
+document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    const headerOffset = document.getElementById('header').offsetHeight;
+    const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+});
