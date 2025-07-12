@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+img {
+  background-color: #ffffff;  /* 给所有图片底色 */
+}
+
 html, body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   background-color: #fafafa;
