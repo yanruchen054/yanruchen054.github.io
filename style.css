@@ -252,14 +252,50 @@ a:hover {
   border: 0;
 }
 
-/* ========== Presentation Image Styling ========== */
-.presentation-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+/* ===================== Presentation (调整后) ===================== */
+/* 给所有 presentation-item 设置居中容器 */
+.presentation-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* 居中对齐 */
+}
+
+/* 限制视频最大宽度为页面宽度的80%，或者最大 640px */
+.video-wrapper {
+  position: relative;
+  width: 80%;              /* 宽度占容器的80% */
+  max-width: 640px;        /* 最大不超过640px */
+  padding-bottom: 45%;     /* 高度按比例缩放：45% 大约对应 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 限制 presentation 图片最大宽度，并居中 */
+.presentation-image {
+  width: 80%;              /* 宽度占容器的80% */
+  max-width: 600px;        /* 最大不超过600px */
   margin-top: 10px;
 }
+
+.presentation-image img {
+  display: block;
+  width: 100%;             /* 拉满父容器宽度 */
+  height: auto;
+  border-radius: 4px;
+}
+
 
 
 /* ===================== Experiences & Internships ===================== */
