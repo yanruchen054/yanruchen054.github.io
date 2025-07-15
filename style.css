@@ -245,7 +245,7 @@ a:hover {
 /* 视频容器按横向卡片宽度自适应 */
 .video-wrapper {
   position: relative;
-  width: 100%;               /* 撑满 .presentation-item */
+  width: 50%;               /* 撑满 .presentation-item */
   padding-bottom: 56.25%;    /* 16:9 高度 */
   height: 0;
   overflow: hidden;
@@ -260,7 +260,7 @@ a:hover {
 
 /* 图片容器同样撑满卡片宽度 */
 .presentation-image {
-  width: 100%;
+  width: 50%;
   margin: 10px 0;
 }
 .presentation-image img {
