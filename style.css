@@ -214,86 +214,58 @@ a:hover {
   color: #444;
 }
 
-/* ===================== Presentation ===================== */
+/* ===================== Presentation — 横向滑动 ===================== */
 .presentation-list {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-direction: row;       /* 横向排列 */
+  gap: 20px;                 /* 每项之间空隙 */
+  overflow-x: auto;          /* 出现横向滚动 */
+  padding: 20px 0;           /* 上下留白 */
+  -webkit-overflow-scrolling: touch; /* 移动端惯性滚动 */
+}
+
+/* 美化滚动条（可选） */
+.presentation-list::-webkit-scrollbar {
+  height: 6px;
+}
+.presentation-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
 }
 
 .presentation-item {
-  margin-bottom: 30px;
+  flex: 0 0 auto;           /* 强制按最小宽度排列，不会被压缩 */
+  min-width: 300px;          /* 可以按需增减：每个卡片的最小宽度 */
+  display: block;            /* 取消之前的居中 flex 设置 */
+  text-align: left;          /* 内容左对齐 */
+  margin-bottom: 0;          /* 取消底部多余空隙 */
 }
 
-.presentation-list h3 {
-  font-size: 1rem;
-  color: #222;
-}
-
-.presentation-list small {
-  font-size: 0.88rem;
-  color: #666;
-}
-
-/* ========== Responsive YouTube Video Wrapper ========== */
+/* 视频容器按横向卡片宽度自适应 */
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 比例 */
+  width: 100%;               /* 撑满 .presentation-item */
+  padding-bottom: 56.25%;    /* 16:9 高度 */
   height: 0;
   overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 .video-wrapper iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   border: 0;
 }
 
-/* ===================== Presentation (调整后) ===================== */
-/* 给所有 presentation-item 设置居中容器 */
-.presentation-item {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;    /* 居中对齐 */
-}
-
-/* 限制视频最大宽度为页面宽度的80%，或者最大 640px */
-.video-wrapper {
-  position: relative;
-  width: 50%;              /* 宽度占容器的80% */
-  max-width: 480px;        /* 最大不超过640px */
-  padding-bottom: 56.25%;     /* 高度按比例缩放：45% 大约对应 16:9 */
-  height: 0;
-  overflow: hidden;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* 限制 presentation 图片最大宽度，并居中 */
+/* 图片容器同样撑满卡片宽度 */
 .presentation-image {
-  width: 50%;              /* 宽度占容器的80% */
-  max-width: 300px;        /* 最大不超过600px */
-  margin-top: 10px;
+  width: 100%;
+  margin: 10px 0;
 }
-
 .presentation-image img {
   display: block;
-  width: 100%;             /* 拉满父容器宽度 */
+  width: 100%;
   height: auto;
   border-radius: 4px;
 }
