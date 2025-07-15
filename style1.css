@@ -1,0 +1,495 @@
+/* ===================== Global Reset ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+html, body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===================== Container ===================== */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ===================== Header & Nav ===================== */
+#header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.logo .subtitle {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu li {
+  font-size: 0.95rem;
+}
+
+.nav-menu a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===================== Section Titles ===================== */
+.section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #007acc;
+  padding-left: 10px;
+  color: #007acc;
+}
+
+/* ===================== About Me ===================== */
+#about p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.contact-info {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.contact-info li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* ===================== Curriculum Vitae ===================== */
+.button {
+  display: inline-block;
+  background-color: #007acc;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #005fa3;
+}
+
+/* ===================== Education ===================== */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-item {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edu-image img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+
+.edu-info {
+  padding: 12px 16px;
+}
+
+.edu-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.edu-duration {
+  font-weight: bold;
+  color: #555;
+}
+
+/* ===================== Research ===================== */
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.research-item {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.research-image img {
+  width: 360px;        /* 从120px 改成200px */
+  height: auto;        /* 高度自适应，保持宽高比 */
+  object-fit: contain; /* contain 保持完整显示 */
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .research-image img {
+    width: 100%;       /* 手机上图片宽度撑满容器 */
+  }
+}
+
+
+.research-info {
+  flex: 1;
+}
+
+.research-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.research-info small {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.research-info p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ===================== Presentation ===================== */
+.presentation-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.presentation-item {
+  margin-bottom: 30px;
+}
+
+.presentation-list h3 {
+  font-size: 1rem;
+  color: #222;
+}
+
+.presentation-list small {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+/* ========== Responsive YouTube Video Wrapper ========== */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 比例 */
+  height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===================== Presentation (调整后) ===================== */
+/* 给所有 presentation-item 设置居中容器 */
+.presentation-item {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* 居中对齐 */
+}
+
+/* 限制视频最大宽度为页面宽度的80%，或者最大 640px */
+.video-wrapper {
+  position: relative;
+  width: 50%;              /* 宽度占容器的80% */
+  max-width: 480px;        /* 最大不超过640px */
+  padding-bottom: 56.25%;     /* 高度按比例缩放：45% 大约对应 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 限制 presentation 图片最大宽度，并居中 */
+.presentation-image {
+  width: 50%;              /* 宽度占容器的80% */
+  max-width: 300px;        /* 最大不超过600px */
+  margin-top: 10px;
+}
+
+.presentation-image img {
+  display: block;
+  width: 100%;             /* 拉满父容器宽度 */
+  height: auto;
+  border-radius: 4px;
+}
+
+
+
+/* ===================== Experiences & Internships ===================== */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.exp-item {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-wrap: nowrap;      /* 禁止换行 */
+  overflow-x: auto;       /* 超出宽度出现横向滚动 */
+  -webkit-overflow-scrolling: touch; /* 移动端平滑滚动 */
+}
+
+.nav-menu li {
+  flex: 0 0 auto;         /* 保持项目宽度自适 */
+}
+
+/* style.css */
+.section {
+  scroll-margin-top: 70px;  /* 留出 header 空间 */
+}
+
+.exp-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.exp-info {
+  flex: 1;
+}
+
+/* style.css */
+.edu-item {
+  display: flex;
+  align-items: center;    /* 垂直居中 */
+  background-color: #fff;
+  /* ... 省略已有样式 ... */
+}
+
+.edu-image {
+  display: flex;
+  align-items: center;    /* 垂直居中 */
+  justify-content: center;/* 水平居中 */
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff; /* 统一底色 */
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.edu-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* style.css */
+.presentation-list {
+  counter-reset: pres;      /* 初始化计数器 */
+  list-style: none;         /* 去掉默认圆点 */
+  padding-left: 0;
+}
+
+.presentation-item {
+  counter-increment: pres;  /* 每个 <li> 计数 +1 */
+  margin-bottom: 30px;
+  text-align: left;         /* 统一左对齐 */
+  display: block;           /* 取消 flex 居中 */
+}
+
+.presentation-item h3::before {
+  content: counter(pres) ". "; /* 在标题前插入 “1. ”、“2. ” */
+  color: #007acc;
+  font-weight: bold;
+}
+
+
+.exp-info h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.exp-info small {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.exp-info ul {
+  list-style: disc inside;
+  margin-top: 8px;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.exp-info p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ===================== Cookie Banner ===================== */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #323232;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  z-index: 200;
+  font-size: 0.95rem;
+}
+
+#cookie-banner p {
+  flex: 1;
+}
+
+#cookie-banner .cookie-learn-more {
+  margin-left: 20px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+#cookie-banner button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#cookie-banner button:hover {
+  background-color: #005fa3;
+}
+
+/* ===================== Footer ===================== */
+#footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===================== Responsive (Mobile) ===================== */
+@media (max-width: 768px) {
+  .edu-item,
+  .research-item,
+  .exp-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .edu-image img,
+  .research-image img,
+  .exp-image img {
+    margin-bottom: 10px;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  #cookie-banner .cookie-learn-more {
+    margin-left: 0;
+  }
+}
