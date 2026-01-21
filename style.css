@@ -286,8 +286,12 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation M
 }
 .proj img{
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 180px;          /* 你觉得还是大/挤，就改成 150 或 140 */
+  object-fit: contain;    /* 关键：不裁切，完整显示 */
+  background: #fff;       /* 比 #fafafa 更干净 */
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px;          /* 留白让不同比例的图也好看 */
+  display: block;
   background: #fafafa;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -529,42 +533,5 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation M
   padding: 10px;            /* 留白更好看 */
 }
 
-/* ===== Fix: Highlighted Projects thumbnails should NOT be cropped ===== */
-
-/* 1) The thumbnail container: give it a stable height and center the image */
-.highlighted-projects .project-thumb,
-.highlighted-projects .project-image,
-.highlighted-projects .thumb,
-.highlight-grid .project-thumb,
-.highlight-grid .project-image,
-.project-grid .project-thumb,
-.project-grid .project-image {
-  height: 190px;              /* 你想更大就 210/230 */
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 2) The image itself: always show the whole figure */
-.highlighted-projects .project-thumb img,
-.highlighted-projects .project-image img,
-.highlighted-projects .thumb img,
-.highlight-grid .project-thumb img,
-.highlight-grid .project-image img,
-.project-grid .project-thumb img,
-.project-grid .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover !important;  /* 关键：完整显示，不裁切 */
-  padding: 10px;                   /* 留白让观感更像师兄 */
-}
-
-/* 3) If there is an existing rule using cover, this will override it */
-.highlighted-projects img,
-.highlight-grid img,
-.project-grid img {
-  object-fit: cover;
-}
+/* Final safeguard: don't crop highlighted thumbnails */
+.proj img { object-fit: contain; }
