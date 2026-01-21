@@ -1,234 +1,646 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yanru Chen – Personal Website</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+/* ===================== Global Reset ===================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-<body>
-  <!-- ===== Header and Navigation ===== -->
-  <header id="header">
-    <div class="container header-row">
-      <div class="logo">
-        <h1>YANRU CHEN</h1>
-        <p class="subtitle">Ph.D. Candidate @ UC San Diego (SEELab)</p>
-      </div>
+:root{
+  --bg: #fafafa;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --border: #e6e6e6;
+  --primary: #007acc;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
 
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#cv">CV</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+html, body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg);
+  color: #333;
+  line-height: 1.6;
+}
 
-  <!-- ===== Two-column Layout ===== -->
-  <main class="container layout">
-    <!-- ===== Left Sidebar ===== -->
-    <aside class="sidebar">
-      <div class="profile-card">
-        <img class="avatar" src="images/profile.jpg" alt="Yanru Chen" />
-        <h2 class="name">Yanru Chen</h2>
-        <p class="role">Ph.D. Candidate · ECE @ UCSD</p>
-        <p class="tagline">Heterogeneous PIM architectures for AI and graph reasoning.</p>
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-        <ul class="meta">
-          <li>📍 San Diego, CA, USA</li>
-          <li>✉️ <a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a></li>
-        </ul>
+/* ===================== Container ===================== */
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 0;
+}
 
-        <div class="links">
-          <a href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          <!-- 可选：GitHub / DBLP / ORCID -->
-        </div>
-      </div>
-    </aside>
+/* ===================== Header & Nav ===================== */
+#header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-    <!-- ===== Right Content ===== -->
-    <section class="content">
-      <!-- About -->
-      <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-          I am a Ph.D. candidate in Electronic and Computer Engineering at UC San Diego, advised by
-          <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank" rel="noopener noreferrer">Prof. Tajana Rosing</a>
-          in the <a href="https://seelab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Systems Energy Efficiency Lab (SEELab)</a>.
-          My research focuses on heterogeneous processing-in-memory (PIM) architectures and system co-design for efficient AI and graph reasoning.
-        </p>
-        <p>
-          I build full-stack solutions from algorithm scheduling to cycle-level simulation and hardware mapping, targeting high throughput and energy efficiency.
-        </p>
-        <p class="note">
-          Outside research, I enjoy singing.
-        </p>
-      </section>
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
 
-      <!-- News -->
-      <section id="news" class="section">
-        <h2>News</h2>
-        <ul class="bullet">
-          <li><span class="date">2026.03</span> 🎉 Passed Ph.D. qualifying exam; advanced to <b>Ph.D. Candidate</b>.</li>
-          <!-- 你后面继续加：paper accepted/submitted, talks, awards -->
-        </ul>
-      </section>
+.logo h1 { font-size: 1.7rem; color: var(--text); letter-spacing: 0.2px; }
+.logo .subtitle { font-size: 0.92rem; color: #555; }
 
-      <!-- Education -->
-      <section id="education" class="section">
-        <h2>Education</h2>
-        <div class="edu-list">
-          <div class="edu-item">
-            <div class="edu-image"><img src="images/jlu-logo.png" alt="Jilin University Logo" /></div>
-            <div class="edu-info">
-              <h3>Jilin University</h3>
-              <p><span class="edu-duration">2017 – 2021</span><br />B.S. in Electronic Science and Technology</p>
-            </div>
-          </div>
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
+.nav-menu li { flex: 0 0 auto; font-size: 0.95rem; }
+.nav-menu a {
+  padding: 7px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  display: inline-block;
+  white-space: nowrap;
+}
+.nav-menu a:hover { background-color: #f0f0f0; }
+.nav-menu a.active { background-color: #eaf5ff; }
 
-          <div class="edu-item">
-            <div class="edu-image"><img src="images/jlu-logo.png" alt="Jilin University Logo" /></div>
-            <div class="edu-info">
-              <h3>Jilin University</h3>
-              <p><span class="edu-duration">2018 – 2020</span><br />B.A. in International Economy and Trade</p>
-            </div>
-          </div>
+/* anchor offset for sticky header */
+.section { scroll-margin-top: 78px; }
 
-          <div class="edu-item">
-            <div class="edu-image"><img src="images/thu-logo.png" alt="Tsinghua University Logo" /></div>
-            <div class="edu-info">
-              <h3>Tsinghua University</h3>
-              <p><span class="edu-duration">2021 – 2024</span><br />M.S. in Electronic Information</p>
-            </div>
-          </div>
+/* ===================== Section Titles ===================== */
+.section { margin-top: 34px; margin-bottom: 34px; }
+.section h2 {
+  font-size: 1.55rem;
+  margin-bottom: 14px;
+  border-left: 4px solid var(--primary);
+  padding-left: 10px;
+  color: var(--primary);
+}
+.section-compact{ margin-top: 0; margin-bottom: 18px; }
+.section-compact h2{ margin-bottom: 10px; }
 
-          <div class="edu-item">
-            <div class="edu-image"><img src="images/ucsd-logo.png" alt="UCSD Logo" /></div>
-            <div class="edu-info">
-              <h3>University of California, San Diego</h3>
-              <p><span class="edu-duration">2024 – 2027</span><br />Ph.D. in Electronic and Computer Engineering</p>
-            </div>
-          </div>
-        </div>
-      </section>
+/* ===================== Buttons ===================== */
+.button {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  box-shadow: var(--shadow);
+}
+.button:hover { background-color: #005fa3; text-decoration: none; }
 
-      <!-- Projects -->
-      <section id="projects" class="section">
-        <h2>Highlighted Projects</h2>
+.mini-btn{
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #333;
+  background: #fff;
+  transition: all .15s;
+}
+.mini-btn:hover{
+  background: #f6fbff;
+  border-color: #cfe9ff;
+  text-decoration: none;
+}
 
-        <div class="project-list">
-          <!-- CHIME -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/proj_chime.png" alt="CHIME project figure" />
-            </div>
-            <div class="project-body">
-              <h3>CHIME <span class="venue">· (PDF)</span></h3>
-              <ul class="bullet">
-                <li>Heterogeneous PIM architecture for efficient AI workloads.</li>
-                <li>System co-design: scheduling + mapping + performance/energy modeling.</li>
-                <li>Designed end-to-end evaluation with realistic workloads.</li>
-              </ul>
-              <div class="project-links">
-                <a class="pill" href="docs/CHIME.pdf" target="_blank" rel="noopener noreferrer">Paper (PDF)</a>
-              </div>
-            </div>
-          </article>
+/* ===================== Homepage Grid (new) ===================== */
+.home-grid{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
 
-          <!-- RAPID-Graph -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/proj_rapidgraph.png" alt="RAPID-Graph project figure" />
-            </div>
-            <div class="project-body">
-              <h3>RAPID-Graph <span class="venue">· (PDF)</span></h3>
-              <ul class="bullet">
-                <li>Graph reasoning acceleration with heterogeneous memory technologies.</li>
-                <li>Cycle-level simulator and architecture exploration framework.</li>
-                <li>Optimized dataflow to reduce off-chip movement.</li>
-              </ul>
-              <div class="project-links">
-                <a class="pill" href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener noreferrer">Paper (PDF)</a>
-              </div>
-            </div>
-          </article>
+.profile-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  position: sticky;
+  top: 92px;
+}
 
-          <!-- HDDB -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/proj_hddb.png" alt="HDDB project figure" />
-            </div>
-            <div class="project-body">
-              <h3>HDDB <span class="venue">· (PDF)</span></h3>
-              <ul class="bullet">
-                <li>In-memory / near-memory design for database-style workloads.</li>
-                <li>Hardware–software co-optimization for throughput and energy.</li>
-                <li>End-to-end pipeline analysis and bottleneck breakdown.</li>
-              </ul>
-              <div class="project-links">
-                <a class="pill" href="docs/HDDB.pdf" target="_blank" rel="noopener noreferrer">Paper (PDF)</a>
-              </div>
-            </div>
-          </article>
+.avatar-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+.avatar{
+  width: 168px;
+  height: 168px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+}
+.avatar-wrap.no-photo .avatar-fallback{ display: flex; }
+.avatar-fallback{
+  display: none;
+  width: 168px;
+  height: 168px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d7efff, #fff3d7);
+  border: 3px solid #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2rem;
+}
 
-          <!-- Gen-Graph -->
-          <article class="project-card">
-            <div class="project-media">
-              <img src="images/proj_gengraph.png" alt="Gen-Graph project figure" />
-            </div>
-            <div class="project-body">
-              <h3>Gen-Graph <span class="venue">· (manuscript)</span></h3>
-              <ul class="bullet">
-                <li>High-performance PIM system for scalable graph workloads.</li>
-                <li>Focus on parallelism, scheduling, and memory hierarchy efficiency.</li>
-                <li>Ongoing work; manuscript and results are being finalized.</li>
-              </ul>
-              <div class="project-links">
-                <span class="pill muted">Paper (TBD)</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+.profile-name{
+  font-size: 1.45rem;
+  color: var(--text);
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.profile-title{
+  text-align: center;
+  color: #444;
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+}
+.profile-tagline{
+  color: #555;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 12px;
+}
 
-      <!-- Publications (先做一个 Selected，后面你再扩展 Full list) -->
-      <section id="publications" class="section">
-        <h2>Selected Publications</h2>
-        <ul class="pub-list">
-          <li><b>CHIME</b> — (details TBD)</li>
-          <li><b>RAPID-Graph</b> — (details TBD)</li>
-          <li><b>HDDB</b> — (details TBD)</li>
-          <li><b>Gen-Graph</b> — (details TBD)</li>
-        </ul>
-        <p class="note">I can provide a full publication list upon request.</p>
-      </section>
+.profile-meta{
+  list-style: none;
+  border-top: 1px dashed #e8e8e8;
+  border-bottom: 1px dashed #e8e8e8;
+  padding: 10px 0;
+  margin: 10px 0 12px 0;
+}
+.profile-meta li{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+  font-size: 0.92rem;
+}
+.meta-k{ color: #777; }
+.meta-v{ color: #222; text-align: right; }
 
-      <!-- CV -->
-      <section id="cv" class="section">
-        <h2>Curriculum Vitae</h2>
-        <p><a href="docs/CV.pdf" class="button" download>Download CV (PDF)</a></p>
-      </section>
-    </section>
-  </main>
+.profile-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.link-chip{
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.9rem;
+  color: #333;
+}
+.link-chip:hover{ text-decoration: none; background: #f7f7f7; }
 
-  <!-- ===== Cookie Consent Banner ===== -->
-  <div id="cookie-banner">
-    <p>We use cookies to ensure a smooth browsing experience. By continuing, you agree to our use of cookies.</p>
-    <button id="cookie-accept">Accept</button>
-    <a href="#" class="cookie-learn-more">Learn More</a>
-  </div>
+.profile-actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
 
-  <!-- ===== Footer ===== -->
-  <footer id="footer">
-    <p>&copy; 2026 Yanru Chen</p>
-  </footer>
+.qr-block{
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.qr-title{ font-size: 0.95rem; color: #333; margin-bottom: 8px; text-align: center; }
+.qr-row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.qr-img{
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.qr-hint{
+  font-size: 0.85rem;
+  color: #777;
+  max-width: 170px;
+  text-align: left;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.main-panel{
+  min-width: 0;
+}
+
+/* ===================== About Me (existing classes kept) ===================== */
+#about p { margin-bottom: 10px; font-size: 1rem; }
+
+.contact-info { list-style: none; margin-top: 10px; }
+.contact-info li { margin-bottom: 6px; font-size: 0.95rem; }
+
+/* ===================== News (new) ===================== */
+.news-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.news-list li{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow);
+}
+.news-date{
+  display: inline-block;
+  min-width: 86px;
+  font-weight: 700;
+  color: #333;
+}
+.news-text{ color: #444; }
+
+/* ===================== Education (your old structure, polished) ===================== */
+.edu-list { display: flex; flex-direction: column; gap: 18px; }
+
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.edu-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.edu-image img{
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+.edu-info { padding: 12px 16px; }
+.edu-info h3 { font-size: 1.1rem; margin-bottom: 6px; color: #222; }
+.edu-duration { font-weight: bold; color: #555; }
+
+/* ===================== Highlighted Projects (new) ===================== */
+.highlight-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.highlight-card{
+  display: flex;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hc-thumb{
+  width: 120px;
+  height: 90px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.hc-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.hc-thumb.thumb-fallback::before{
+  content: attr(data-label);
+  font-weight: 800;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+.hc-body{ flex: 1; min-width: 0; }
+.hc-body h3{
+  font-size: 1.03rem;
+  margin-bottom: 6px;
+  color: #222;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+.hc-venue{
+  font-size: 0.88rem;
+  color: #777;
+  font-weight: 600;
+}
+.hc-desc{ font-size: 0.93rem; color: #444; margin-bottom: 10px; }
+.hc-links{ display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ===================== Publications (new) ===================== */
+.pub-group{ margin-top: 18px; }
+.pub-group-title{
+  font-size: 1.1rem;
+  color: #222;
+  margin: 10px 0 12px 0;
+}
+
+.pub-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pub-item{
+  display: flex;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.pub-thumb{
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fbfbfb;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pub-thumb.badge{
+  background: linear-gradient(135deg, #eaf5ff, #fff1db);
+}
+.pub-thumb.badge::before{
+  content: attr(data-label);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+.pub-content{ flex: 1; min-width: 0; }
+.pub-title{
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+.pub-authors{ font-size: 0.93rem; color: #444; margin-bottom: 2px; }
+.pub-venue{ font-size: 0.92rem; color: #666; margin-bottom: 8px; }
+.pub-links{ display: flex; gap: 8px; flex-wrap: wrap; }
+
+.pub-note{
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: #666;
+  padding: 10px 12px;
+  border: 1px dashed #d9d9d9;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* ===================== Research (keep your existing layout, small polish) ===================== */
+.research-list { display: flex; flex-direction: column; gap: 20px; }
+
+.research-item {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.research-image img {
+  width: 360px;
+  height: auto;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.research-info { flex: 1; min-width: 0; }
+.research-info h3 { font-size: 1.05rem; margin-bottom: 8px; color: #222; }
+.research-info small { display: block; font-size: 0.9rem; color: #777; margin-top: 4px; margin-bottom: 8px; }
+.research-info p { font-size: 0.95rem; color: #444; }
+
+/* ===================== Presentation — horizontal scroll (fix widths) ===================== */
+.presentation-list {
+  counter-reset: pres;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 14px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.presentation-list::-webkit-scrollbar { height: 6px; }
+.presentation-list::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.18); border-radius: 3px; }
+
+.presentation-item {
+  counter-increment: pres;
+  flex: 0 0 auto;
+  min-width: 320px;
+  max-width: 420px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.presentation-item h3::before {
+  content: counter(pres) ". ";
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+.presentation-image { width: 100%; margin: 10px 0; }
+.presentation-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* ===================== Talks (new) ===================== */
+.talks-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.talks-list li{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow);
+}
+.talk-date{
+  display: inline-block;
+  min-width: 86px;
+  font-weight: 800;
+  color: #333;
+}
+.talk-text{ color: #444; }
+
+/* ===================== Experiences & Internships (keep your structure) ===================== */
+.exp-list { display: flex; flex-direction: column; gap: 20px; }
+
+.exp-item {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.exp-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.exp-info { flex: 1; min-width: 0; }
+.exp-info h3 { font-size: 1rem; margin-bottom: 8px; color: #222; }
+.exp-info small { font-size: 0.88rem; color: #666; display:block; margin-top: 4px; }
+.exp-info ul { list-style: disc inside; margin-top: 8px; color: #444; font-size: 0.95rem; }
+.exp-info p { margin-top: 6px; font-size: 0.95rem; color: #444; }
+
+/* ===================== Cookie Banner ===================== */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #323232;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  z-index: 200;
+  font-size: 0.95rem;
+}
+
+#cookie-banner p { flex: 1; }
+#cookie-banner .cookie-learn-more { margin-left: 20px; font-size: 0.9rem; color: #ddd; }
+
+#cookie-banner button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#cookie-banner button:hover { background-color: #005fa3; }
+
+/* ===================== Footer ===================== */
+#footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 980px){
+  .home-grid{ grid-template-columns: 1fr; }
+  .profile-card{ position: relative; top: 0; }
+  .highlight-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .edu-item,
+  .research-item,
+  .exp-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-image { width: 100%; height: 90px; border-right: none; border-bottom: 1px solid var(--border); }
+  .research-image img { width: 100%; }
+  .nav-menu ul { gap: 8px; }
+
+  #cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  #cookie-banner .cookie-learn-more { margin-left: 0; }
+}
