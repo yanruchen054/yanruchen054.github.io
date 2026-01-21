@@ -497,3 +497,34 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation M
   .proj-grid{ grid-template-columns: 1fr; }
   .presentation-item{ width: 320px; }
 }
+
+/* ===== Highlighted Projects: make images fully visible ===== */
+.highlight-grid .project-thumb,
+.highlight-grid .project-thumb img,
+.highlighted-grid .project-thumb,
+.highlighted-grid .project-thumb img,
+.project-grid .project-thumb,
+.project-grid .project-thumb img {
+  width: 100%;
+}
+
+.highlight-grid .project-thumb,
+.highlighted-grid .project-thumb,
+.project-grid .project-thumb {
+  height: 160px;            /* 你觉得还不够就改 180/200 */
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-grid .project-thumb img,
+.highlighted-grid .project-thumb img,
+.project-grid .project-thumb img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;      /* 关键：完整显示，不裁切 */
+  padding: 10px;            /* 留白更好看 */
+}
