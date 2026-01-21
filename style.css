@@ -68,7 +68,7 @@ a:hover { text-decoration: underline; }
 .nav-menu a:hover { background-color: #f0f0f0; }
 .nav-menu a.active { background-color: #eaf5ff; }
 
-/* anchor offset for sticky header */
+/* anchor offset */
 .section { scroll-margin-top: 78px; }
 
 /* ===================== Section Titles ===================== */
@@ -112,7 +112,7 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
-/* ===================== Homepage Grid (new) ===================== */
+/* ===================== Homepage Grid ===================== */
 .home-grid{
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -221,43 +221,14 @@ a:hover { text-decoration: underline; }
   margin-top: 4px;
 }
 
-.qr-block{
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-}
-.qr-title{ font-size: 0.95rem; color: #333; margin-bottom: 8px; text-align: center; }
-.qr-row{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.qr-img{
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #fff;
-}
-.qr-hint{
-  font-size: 0.85rem;
-  color: #777;
-  max-width: 170px;
-  text-align: left;
-}
+.main-panel{ min-width: 0; }
 
-.main-panel{
-  min-width: 0;
-}
-
-/* ===================== About Me (existing classes kept) ===================== */
+/* About */
 #about p { margin-bottom: 10px; font-size: 1rem; }
-
 .contact-info { list-style: none; margin-top: 10px; }
 .contact-info li { margin-bottom: 6px; font-size: 0.95rem; }
 
-/* ===================== News (new) ===================== */
+/* News */
 .news-list{
   list-style: none;
   display: flex;
@@ -273,13 +244,13 @@ a:hover { text-decoration: underline; }
 }
 .news-date{
   display: inline-block;
-  min-width: 86px;
-  font-weight: 700;
+  min-width: 70px;
+  font-weight: 800;
   color: #333;
 }
 .news-text{ color: #444; }
 
-/* ===================== Education (your old structure, polished) ===================== */
+/* ===================== Education ===================== */
 .edu-list { display: flex; flex-direction: column; gap: 18px; }
 
 .edu-item {
@@ -312,7 +283,7 @@ a:hover { text-decoration: underline; }
 .edu-info h3 { font-size: 1.1rem; margin-bottom: 6px; color: #222; }
 .edu-duration { font-weight: bold; color: #555; }
 
-/* ===================== Highlighted Projects (new) ===================== */
+/* ===================== Highlighted Projects ===================== */
 .highlight-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -327,33 +298,23 @@ a:hover { text-decoration: underline; }
   border-radius: 14px;
   padding: 14px;
   box-shadow: var(--shadow);
-  overflow: hidden;
 }
 
 .hc-thumb{
-  width: 120px;
-  height: 90px;
+  width: 140px;
+  height: 96px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #fbfbfb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  position: relative;
+  overflow: hidden;
 }
 .hc-thumb img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 12px;
 }
-.hc-thumb.thumb-fallback::before{
-  content: attr(data-label);
-  font-weight: 800;
-  color: #2c3e50;
-  letter-spacing: 1px;
-}
+
 .hc-body{ flex: 1; min-width: 0; }
 .hc-body h3{
   font-size: 1.03rem;
@@ -364,15 +325,11 @@ a:hover { text-decoration: underline; }
   gap: 8px;
   align-items: baseline;
 }
-.hc-venue{
-  font-size: 0.88rem;
-  color: #777;
-  font-weight: 600;
-}
+.hc-venue{ font-size: 0.88rem; color: #777; font-weight: 600; }
 .hc-desc{ font-size: 0.93rem; color: #444; margin-bottom: 10px; }
 .hc-links{ display: flex; gap: 8px; flex-wrap: wrap; }
 
-/* ===================== Publications (new) ===================== */
+/* ===================== Publications ===================== */
 .pub-group{ margin-top: 18px; }
 .pub-group-title{
   font-size: 1.1rem;
@@ -380,11 +337,7 @@ a:hover { text-decoration: underline; }
   margin: 10px 0 12px 0;
 }
 
-.pub-list{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+.pub-list{ display: flex; flex-direction: column; gap: 12px; }
 
 .pub-item{
   display: flex;
@@ -403,10 +356,10 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   background: #fbfbfb;
   flex-shrink: 0;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .pub-thumb.badge{
@@ -414,19 +367,21 @@ a:hover { text-decoration: underline; }
 }
 .pub-thumb.badge::before{
   content: attr(data-label);
-  font-weight: 800;
+  font-weight: 900;
   font-size: 0.9rem;
   color: #2c3e50;
   letter-spacing: 0.5px;
 }
 
-.pub-content{ flex: 1; min-width: 0; }
-.pub-title{
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 4px;
+/* NEW: allow real images inside pub-thumb */
+.pub-thumb.img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.pub-content{ flex: 1; min-width: 0; }
+.pub-title{ font-size: 1.02rem; font-weight: 800; color: #222; margin-bottom: 4px; }
 .pub-authors{ font-size: 0.93rem; color: #444; margin-bottom: 2px; }
 .pub-venue{ font-size: 0.92rem; color: #666; margin-bottom: 8px; }
 .pub-links{ display: flex; gap: 8px; flex-wrap: wrap; }
@@ -441,7 +396,7 @@ a:hover { text-decoration: underline; }
   background: #fff;
 }
 
-/* ===================== Research (keep your existing layout, small polish) ===================== */
+/* ===================== Research ===================== */
 .research-list { display: flex; flex-direction: column; gap: 20px; }
 
 .research-item {
@@ -468,7 +423,7 @@ a:hover { text-decoration: underline; }
 .research-info small { display: block; font-size: 0.9rem; color: #777; margin-top: 4px; margin-bottom: 8px; }
 .research-info p { font-size: 0.95rem; color: #444; }
 
-/* ===================== Presentation — horizontal scroll (fix widths) ===================== */
+/* ===================== Presentations (horizontal scroll) ===================== */
 .presentation-list {
   counter-reset: pres;
   list-style: none;
@@ -498,7 +453,7 @@ a:hover { text-decoration: underline; }
 .presentation-item h3::before {
   content: counter(pres) ". ";
   color: var(--primary);
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .video-wrapper {
@@ -520,20 +475,15 @@ a:hover { text-decoration: underline; }
 
 .presentation-image { width: 100%; margin: 10px 0; }
 .presentation-image img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   border-radius: 12px;
   border: 1px solid var(--border);
 }
 
-/* ===================== Talks (new) ===================== */
-.talks-list{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+/* Talks */
+.talks-list{ list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .talks-list li{
   background: #fff;
   border: 1px solid var(--border);
@@ -541,15 +491,10 @@ a:hover { text-decoration: underline; }
   padding: 10px 12px;
   box-shadow: var(--shadow);
 }
-.talk-date{
-  display: inline-block;
-  min-width: 86px;
-  font-weight: 800;
-  color: #333;
-}
+.talk-date{ display: inline-block; min-width: 70px; font-weight: 900; color: #333; }
 .talk-text{ color: #444; }
 
-/* ===================== Experiences & Internships (keep your structure) ===================== */
+/* Experiences */
 .exp-list { display: flex; flex-direction: column; gap: 20px; }
 
 .exp-item {
@@ -577,11 +522,10 @@ a:hover { text-decoration: underline; }
 .exp-info ul { list-style: disc inside; margin-top: 8px; color: #444; font-size: 0.95rem; }
 .exp-info p { margin-top: 6px; font-size: 0.95rem; color: #444; }
 
-/* ===================== Cookie Banner ===================== */
+/* Cookie */
 #cookie-banner {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 0; left: 0;
   width: 100%;
   background-color: #323232;
   color: #fff;
@@ -592,10 +536,8 @@ a:hover { text-decoration: underline; }
   z-index: 200;
   font-size: 0.95rem;
 }
-
 #cookie-banner p { flex: 1; }
 #cookie-banner .cookie-learn-more { margin-left: 20px; font-size: 0.9rem; color: #ddd; }
-
 #cookie-banner button {
   background-color: var(--primary);
   color: #fff;
@@ -603,11 +545,10 @@ a:hover { text-decoration: underline; }
   padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 #cookie-banner button:hover { background-color: #005fa3; }
 
-/* ===================== Footer ===================== */
+/* Footer */
 #footer {
   background-color: #f0f0f0;
   text-align: center;
@@ -617,7 +558,7 @@ a:hover { text-decoration: underline; }
   color: #666;
 }
 
-/* ===================== Responsive ===================== */
+/* Responsive */
 @media (max-width: 980px){
   .home-grid{ grid-template-columns: 1fr; }
   .profile-card{ position: relative; top: 0; }
@@ -632,10 +573,8 @@ a:hover { text-decoration: underline; }
     align-items: center;
     text-align: center;
   }
-
   .edu-image { width: 100%; height: 90px; border-right: none; border-bottom: 1px solid var(--border); }
   .research-image img { width: 100%; }
-  .nav-menu ul { gap: 8px; }
 
   #cookie-banner {
     flex-direction: column;

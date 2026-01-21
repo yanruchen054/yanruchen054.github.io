@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // ===== Cookie banner =====
+  // Cookie banner
   const banner = document.getElementById("cookie-banner");
   const acceptBtn = document.getElementById("cookie-accept");
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== Smooth scroll for in-page anchors =====
+  // Smooth scroll
   document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ===== Active nav highlight on scroll =====
+  // Active nav highlight
   const navLinks = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]'));
   const sections = navLinks
     .map(a => document.querySelector(a.getAttribute("href")))

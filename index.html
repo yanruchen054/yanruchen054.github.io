@@ -1,646 +1,552 @@
-/* ===================== Global Reset ===================== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YANRU CHEN – Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-:root{
-  --bg: #fafafa;
-  --card: #ffffff;
-  --text: #222;
-  --muted: #666;
-  --border: #e6e6e6;
-  --primary: #007acc;
-  --shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
+<body>
+  <!-- ===== Header and Navigation ===== -->
+  <header id="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <h1>YANRU CHEN</h1>
+        <p class="subtitle">Ph.D. Candidate · UC San Diego</p>
+      </div>
 
-html, body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--bg);
-  color: #333;
-  line-height: 1.6;
-}
+      <nav class="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Homepage</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#highlighted">Highlighted</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#presentation">Presentations</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#experience">Experiences</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-a { color: var(--primary); text-decoration: none; }
-a:hover { text-decoration: underline; }
+  <main class="container">
 
-/* ===================== Container ===================== */
-.container {
-  width: 90%;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 18px 0;
-}
+    <!-- ===== Homepage ===== -->
+    <section id="home" class="section home-grid">
+      <!-- Left: profile -->
+      <aside class="profile-card" aria-label="Profile">
+        <div class="avatar-wrap">
+          <img class="avatar" src="images/profile.jpg" alt="Yanru Chen portrait"
+               onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');" />
+          <div class="avatar-fallback" aria-hidden="true"><span>YC</span></div>
+        </div>
 
-/* ===================== Header & Nav ===================== */
-#header {
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+        <h2 class="profile-name">Yanru Chen</h2>
+        <p class="profile-title">Ph.D. Candidate @ UC San Diego</p>
 
-.header-inner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-}
+        <p class="profile-tagline">
+          Computer Architecture · Processing-in-Memory · In-Storage Processing · LLM · Graph Analytics · SW/HW Co-design
+        </p>
 
-.logo h1 { font-size: 1.7rem; color: var(--text); letter-spacing: 0.2px; }
-.logo .subtitle { font-size: 0.92rem; color: #555; }
+        <ul class="profile-meta">
+          <li><span class="meta-k">Location</span><span class="meta-v">San Diego, CA, USA</span></li>
+          <li><span class="meta-k">Email</span><span class="meta-v"><a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a></span></li>
+          <li><span class="meta-k">Phone</span><span class="meta-v">+1 858-412-9248</span></li>
+        </ul>
 
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 2px;
-}
-.nav-menu li { flex: 0 0 auto; font-size: 0.95rem; }
-.nav-menu a {
-  padding: 7px 10px;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-  display: inline-block;
-  white-space: nowrap;
-}
-.nav-menu a:hover { background-color: #f0f0f0; }
-.nav-menu a.active { background-color: #eaf5ff; }
+        <div class="profile-links" aria-label="External Links">
+          <a class="link-chip" href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a class="link-chip" href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
 
-/* anchor offset for sticky header */
-.section { scroll-margin-top: 78px; }
+        <div class="profile-actions">
+          <a href="docs/CV.pdf" class="button" download>Download CV (PDF)</a>
+        </div>
+      </aside>
 
-/* ===================== Section Titles ===================== */
-.section { margin-top: 34px; margin-bottom: 34px; }
-.section h2 {
-  font-size: 1.55rem;
-  margin-bottom: 14px;
-  border-left: 4px solid var(--primary);
-  padding-left: 10px;
-  color: var(--primary);
-}
-.section-compact{ margin-top: 0; margin-bottom: 18px; }
-.section-compact h2{ margin-bottom: 10px; }
+      <!-- Right: about + news -->
+      <div class="main-panel">
+        <section id="about" class="section section-compact">
+          <h2>About Me</h2>
+          <p>
+            Yanru is a Ph.D. candidate in Electronic and Computer Engineering at the University of California San Diego.
+            She works with
+            <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank" rel="noopener noreferrer">Prof. Tajana Rosing</a>
+            in the
+            <a href="https://seelab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Systems Energy Efficiency Lab (SEELab)</a>.
+            Outside of her academic work, Yanru enjoys singing and won the Audience Favorite Award in Jilin University singer competition.
+          </p>
 
-/* ===================== Buttons ===================== */
-.button {
-  display: inline-block;
-  background-color: var(--primary);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background-color 0.2s;
-  box-shadow: var(--shadow);
-}
-.button:hover { background-color: #005fa3; text-decoration: none; }
+          <ul class="contact-info">
+            <li><strong>Email:</strong> <a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a></li>
+            <li><strong>Phone:</strong> +1 858-412-9248</li>
+            <li><strong>Research Areas:</strong> Computer Architecture, Processing-in-memory, In-Storage Processing, LLM, Graph Analytics, SW/HW Co-design</li>
+            <li><strong>Links:</strong>
+              <a href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+              <a href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </li>
+          </ul>
+        </section>
 
-.mini-btn{
-  display: inline-block;
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  color: #333;
-  background: #fff;
-  transition: all .15s;
-}
-.mini-btn:hover{
-  background: #f6fbff;
-  border-color: #cfe9ff;
-  text-decoration: none;
-}
+        <section id="news" class="section section-compact">
+          <h2>🔥 News</h2>
+          <ul class="news-list">
+            <li><span class="news-date">2026</span> <span class="news-text">CHIME — accepted by DATE 2026.</span></li>
+            <li><span class="news-date">2026</span> <span class="news-text">RAPID-Graph — accepted by DATE 2026.</span></li>
+            <li><span class="news-date">2026</span> <span class="news-text">HDDB — submitted to DAC 2026.</span></li>
+          </ul>
+        </section>
+      </div>
+    </section>
 
-/* ===================== Homepage Grid (new) ===================== */
-.home-grid{
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 24px;
-  align-items: start;
-}
+    <!-- ===== CV ===== -->
+    <section id="cv" class="section">
+      <h2>Curriculum Vitae</h2>
+      <p><a href="docs/CV.pdf" class="button" download>Download CV (PDF)</a></p>
+    </section>
 
-.profile-card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  padding: 18px;
-  position: sticky;
-  top: 92px;
-}
+    <!-- ===== Education ===== -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-image"><img src="images/jlu-logo.png" alt="Jilin University Logo" /></div>
+          <div class="edu-info">
+            <h3>Jilin University</h3>
+            <p><span class="edu-duration">2017 – 2021</span><br />B.S. in Electronic Science and Technology</p>
+          </div>
+        </div>
 
-.avatar-wrap{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 12px;
-  position: relative;
-}
-.avatar{
-  width: 168px;
-  height: 168px;
-  border-radius: 999px;
-  object-fit: cover;
-  border: 3px solid #fff;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-}
-.avatar-wrap.no-photo .avatar-fallback{ display: flex; }
-.avatar-fallback{
-  display: none;
-  width: 168px;
-  height: 168px;
-  border-radius: 999px;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #d7efff, #fff3d7);
-  border: 3px solid #fff;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-  color: #2c3e50;
-  font-weight: 700;
-  font-size: 2rem;
-}
+        <div class="edu-item">
+          <div class="edu-image"><img src="images/jlu-logo.png" alt="Jilin University Logo" /></div>
+          <div class="edu-info">
+            <h3>Jilin University</h3>
+            <p><span class="edu-duration">2018 – 2020</span><br />B.A. in International Economy and Trade</p>
+          </div>
+        </div>
 
-.profile-name{
-  font-size: 1.45rem;
-  color: var(--text);
-  text-align: center;
-  margin-top: 6px;
-  margin-bottom: 2px;
-}
-.profile-title{
-  text-align: center;
-  color: #444;
-  font-size: 0.98rem;
-  margin-bottom: 10px;
-}
-.profile-tagline{
-  color: #555;
-  font-size: 0.95rem;
-  text-align: center;
-  margin-bottom: 12px;
-}
+        <div class="edu-item">
+          <div class="edu-image"><img src="images/thu-logo.png" alt="Tsinghua University Logo" /></div>
+          <div class="edu-info">
+            <h3>Tsinghua University</h3>
+            <p><span class="edu-duration">2021 – 2024</span><br />M.S. in Electronic Information</p>
+          </div>
+        </div>
 
-.profile-meta{
-  list-style: none;
-  border-top: 1px dashed #e8e8e8;
-  border-bottom: 1px dashed #e8e8e8;
-  padding: 10px 0;
-  margin: 10px 0 12px 0;
-}
-.profile-meta li{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 4px 0;
-  font-size: 0.92rem;
-}
-.meta-k{ color: #777; }
-.meta-v{ color: #222; text-align: right; }
+        <div class="edu-item">
+          <div class="edu-image"><img src="images/ucsd-logo.png" alt="UCSD Logo" /></div>
+          <div class="edu-info">
+            <h3>University of California, San Diego</h3>
+            <p><span class="edu-duration">2024 – 2027 (Expected)</span><br />Ph.D. in Electronic and Computer Engineering</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.profile-links{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  margin-bottom: 12px;
-}
-.link-chip{
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: #fff;
-  font-size: 0.9rem;
-  color: #333;
-}
-.link-chip:hover{ text-decoration: none; background: #f7f7f7; }
+    <!-- ===== Highlighted Projects (use your existing proj_*.png) ===== -->
+    <section id="highlighted" class="section">
+      <h2>Highlighted Projects</h2>
 
-.profile-actions{
-  display: flex;
-  justify-content: center;
-  margin-top: 4px;
-}
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <div class="hc-thumb">
+            <img src="images/proj_chime.png" alt="CHIME thumbnail" />
+          </div>
+          <div class="hc-body">
+            <h3>CHIME <span class="hc-venue">DATE 2026 (Accepted)</span></h3>
+            <p class="hc-desc">Chiplet-based heterogeneous near-memory acceleration for edge multimodal LLM inference.</p>
+            <div class="hc-links">
+              <a class="mini-btn" href="docs/CHIME.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            </div>
+          </div>
+        </article>
 
-.qr-block{
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-}
-.qr-title{ font-size: 0.95rem; color: #333; margin-bottom: 8px; text-align: center; }
-.qr-row{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.qr-img{
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #fff;
-}
-.qr-hint{
-  font-size: 0.85rem;
-  color: #777;
-  max-width: 170px;
-  text-align: left;
-}
+        <article class="highlight-card">
+          <div class="hc-thumb">
+            <img src="images/proj_rapidgraph.png" alt="RAPID-Graph thumbnail" />
+          </div>
+          <div class="hc-body">
+            <h3>RAPID-Graph <span class="hc-venue">DATE 2026 (Accepted)</span></h3>
+            <p class="hc-desc">Recursive APSP using processing-in-memory for dynamic programming on large graphs.</p>
+            <div class="hc-links">
+              <a class="mini-btn" href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            </div>
+          </div>
+        </article>
 
-.main-panel{
-  min-width: 0;
-}
+        <article class="highlight-card">
+          <div class="hc-thumb">
+            <img src="images/proj_hddb.png" alt="HDDB thumbnail" />
+          </div>
+          <div class="hc-body">
+            <h3>HDDB <span class="hc-venue">DAC 2026 (Submitted)</span></h3>
+            <p class="hc-desc">In-storage SQL database search using hyperdimensional computing on FeNAND flash.</p>
+            <div class="hc-links">
+              <a class="mini-btn" href="docs/HDDB.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+            </div>
+          </div>
+        </article>
 
-/* ===================== About Me (existing classes kept) ===================== */
-#about p { margin-bottom: 10px; font-size: 1rem; }
+        <article class="highlight-card">
+          <div class="hc-thumb">
+            <img src="images/proj_gengraph.png" alt="Gen-Graph thumbnail" />
+          </div>
+          <div class="hc-body">
+            <h3>Gen-Graph <span class="hc-venue">Ongoing</span></h3>
+            <p class="hc-desc">Heterogeneous PIM architectures for scalable AI and graph reasoning (work in progress).</p>
+            <div class="hc-links">
+              <!-- add links when ready -->
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-.contact-info { list-style: none; margin-top: 10px; }
-.contact-info li { margin-bottom: 6px; font-size: 0.95rem; }
+    <!-- ===== Publications (grouped + small picture + PDF/Code links) ===== -->
+    <section id="publications" class="section">
+      <h2>Publications</h2>
 
-/* ===================== News (new) ===================== */
-.news-list{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.news-list li{
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 10px 12px;
-  box-shadow: var(--shadow);
-}
-.news-date{
-  display: inline-block;
-  min-width: 86px;
-  font-weight: 700;
-  color: #333;
-}
-.news-text{ color: #444; }
+      <div class="pub-group">
+        <h3 class="pub-group-title">🧠 PIM / HDC / Graph & Database</h3>
 
-/* ===================== Education (your old structure, polished) ===================== */
-.edu-list { display: flex; flex-direction: column; gap: 18px; }
+        <div class="pub-list">
+          <div class="pub-item">
+            <div class="pub-thumb badge" data-label="CHIME"></div>
+            <div class="pub-content">
+              <div class="pub-title">CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference</div>
+              <div class="pub-authors">Yanru Chen*, Runyang Tian*, Yue Pan, Zheyu Li, Weihong Xu, Tajana Rosing†</div>
+              <div class="pub-venue">DATE, 2026. (Accepted)</div>
+              <div class="pub-links">
+                <a class="mini-btn" href="docs/CHIME.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+              </div>
+            </div>
+          </div>
 
-.edu-item {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  background-color: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
+          <div class="pub-item">
+            <div class="pub-thumb badge" data-label="RAPID"></div>
+            <div class="pub-content">
+              <div class="pub-title">RAPID-Graph: Recursive All-Pairs Shortest Paths Using Processing-in-Memory for Dynamic Programming on Graph</div>
+              <div class="pub-authors">Yanru Chen*, Zheyu Li*, Keming Fan, Runyang Tian, John Hsu, Minxuan Zhou, Tajana Rosing†</div>
+              <div class="pub-venue">DATE, 2026. (Accepted)</div>
+              <div class="pub-links">
+                <a class="mini-btn" href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+              </div>
+            </div>
+          </div>
 
-.edu-image{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 120px;
-  background: #fff;
-  border-right: 1px solid var(--border);
-  flex-shrink: 0;
-}
-.edu-image img{
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-}
-.edu-info { padding: 12px 16px; }
-.edu-info h3 { font-size: 1.1rem; margin-bottom: 6px; color: #222; }
-.edu-duration { font-weight: bold; color: #555; }
+          <div class="pub-item">
+            <div class="pub-thumb badge" data-label="HDDB"></div>
+            <div class="pub-content">
+              <div class="pub-title">HDDB: Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash</div>
+              <div class="pub-authors">Quanling Zhao*, Yanru Chen*, Runyang Tian, Weihong Xu, Tajana Rosing†</div>
+              <div class="pub-venue">Submitted to DAC (Chips to Systems), 2026.</div>
+              <div class="pub-links">
+                <a class="mini-btn" href="docs/HDDB.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+              </div>
+            </div>
+          </div>
 
-/* ===================== Highlighted Projects (new) ===================== */
-.highlight-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
+          <div class="pub-item">
+            <div class="pub-thumb badge" data-label="GEN"></div>
+            <div class="pub-content">
+              <div class="pub-title">Gen-Graph: Heterogeneous PIM Architectures for Scalable AI and Graph Reasoning</div>
+              <div class="pub-authors">Yanru Chen, (collaborators)</div>
+              <div class="pub-venue">Work in progress.</div>
+              <div class="pub-links"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-.highlight-card{
-  display: flex;
-  gap: 14px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
+      <div class="pub-group">
+        <h3 class="pub-group-title">🧪 Wearable / Flexible Electronics / Sensors</h3>
 
-.hc-thumb{
-  width: 120px;
-  height: 90px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fbfbfb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-}
-.hc-thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.hc-thumb.thumb-fallback::before{
-  content: attr(data-label);
-  font-weight: 800;
-  color: #2c3e50;
-  letter-spacing: 1px;
-}
-.hc-body{ flex: 1; min-width: 0; }
-.hc-body h3{
-  font-size: 1.03rem;
-  margin-bottom: 6px;
-  color: #222;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: baseline;
-}
-.hc-venue{
-  font-size: 0.88rem;
-  color: #777;
-  font-weight: 600;
-}
-.hc-desc{ font-size: 0.93rem; color: #444; margin-bottom: 10px; }
-.hc-links{ display: flex; gap: 8px; flex-wrap: wrap; }
+        <div class="pub-list">
+          <div class="pub-item">
+            <div class="pub-thumb img">
+              <img src="images/AMI.jpg" alt="AMI thumbnail" />
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">Porous PDMS–ZnO Wearable Gas Sensor for Acetone Biomarker Detection and Breath Analysis</div>
+              <div class="pub-authors">Yanru Chen, (co-authors)</div>
+              <div class="pub-venue">ACS Applied Materials & Interfaces, 2024.</div>
+              <div class="pub-links"></div>
+            </div>
+          </div>
 
-/* ===================== Publications (new) ===================== */
-.pub-group{ margin-top: 18px; }
-.pub-group-title{
-  font-size: 1.1rem;
-  color: #222;
-  margin: 10px 0 12px 0;
-}
+          <div class="pub-item">
+            <div class="pub-thumb img">
+              <img src="images/mems.png" alt="MEMS thumbnail" />
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">Enhanced Conductivity in Laser-Induced Graphene–Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment</div>
+              <div class="pub-authors">Yixin Liu*, Yanru Chen*, (co-authors)</div>
+              <div class="pub-venue">IEEE MEMS, 2024. (Poster)</div>
+              <div class="pub-links"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-.pub-list{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+      <div class="pub-group">
+        <h3 class="pub-group-title">🩺 Computational Medicine / Biomedical Signal Processing</h3>
 
-.pub-item{
-  display: flex;
-  gap: 14px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: var(--shadow);
-}
+        <div class="pub-list">
+          <div class="pub-item">
+            <div class="pub-thumb img">
+              <img src="images/embc2044.jpg" alt="EMBC 2044 thumbnail" />
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">Quantifying microvascular alterations due to a pharmacological agent</div>
+              <div class="pub-authors">Yanru Chen, (co-authors)</div>
+              <div class="pub-venue">IEEE EMBC, 2020. (Oral)</div>
+              <div class="pub-links"></div>
+            </div>
+          </div>
 
-.pub-thumb{
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #fbfbfb;
-  flex-shrink: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+          <div class="pub-item">
+            <div class="pub-thumb img">
+              <img src="images/embc2037.jpg" alt="EMBC 2037 thumbnail" />
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">Fractal Dimension Based Texture Analysis of CT Perfusion Imaging</div>
+              <div class="pub-authors">(authors)</div>
+              <div class="pub-venue">IEEE EMBC, 2020. (Oral)</div>
+              <div class="pub-links"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-.pub-thumb.badge{
-  background: linear-gradient(135deg, #eaf5ff, #fff1db);
-}
-.pub-thumb.badge::before{
-  content: attr(data-label);
-  font-weight: 800;
-  font-size: 0.9rem;
-  color: #2c3e50;
-  letter-spacing: 0.5px;
-}
+      <div class="pub-note">
+        PDFs: put files into <code>docs/</code> and link as <code>docs/xxx.pdf</code>. Thumbnails already use your existing images.
+      </div>
+    </section>
 
-.pub-content{ flex: 1; min-width: 0; }
-.pub-title{
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 4px;
-}
-.pub-authors{ font-size: 0.93rem; color: #444; margin-bottom: 2px; }
-.pub-venue{ font-size: 0.92rem; color: #666; margin-bottom: 8px; }
-.pub-links{ display: flex; gap: 8px; flex-wrap: wrap; }
+    <!-- ===== Research (keep your original full section) ===== -->
+    <section id="research" class="section">
+      <h2>Research</h2>
+      <div class="research-list">
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/acetone-sensor.png" alt="Wearable acetone gas sensor" />
+          </div>
+          <div class="research-info">
+            <h3>Wearable Acetone Gas Sensor for Measuring Exhaled Breath of Diabetes Patients
+              <small>ACS Applied Materials & Interfaces, Oct 2024</small>
+            </h3>
+            <p>
+              Semiconductor metal oxide (SMO) gas sensors are low‐cost, real‐time, and long‐lasting but usually need elevated temperatures.
+              We developed a flexible, room‐temperature sensor using UV‐assisted design by embedding ZnO nanoparticles into a PDMS porous framework.
+              An innovative low‐modulus island‐bridge structure allowed 60% stretchability.
+            </p>
+          </div>
+        </div>
 
-.pub-note{
-  margin-top: 14px;
-  font-size: 0.92rem;
-  color: #666;
-  padding: 10px 12px;
-  border: 1px dashed #d9d9d9;
-  border-radius: 12px;
-  background: #fff;
-}
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/lig-sic.png" alt="LIG-SiC laminated nanosheets" />
+          </div>
+          <div class="research-info">
+            <h3>Enhanced Conductivity in Laser‐Induced Graphene–Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and Pulse Wave Velocity Assessment
+              <small>IEEE MEMS Conference 2024 (0115)</small>
+            </h3>
+            <p>Novel flexible strain sensor based on LIG–SiC laminated nanosheets with strong stability and accuracy in PWV tests.</p>
+          </div>
+        </div>
 
-/* ===================== Research (keep your existing layout, small polish) ===================== */
-.research-list { display: flex; flex-direction: column; gap: 20px; }
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/pm3-perfusion.png" alt="PM3 platforms perfusion analysis" />
+          </div>
+          <div class="research-info">
+            <h3>Perfusion Heterogeneity Assessment in Human CT Data Using PM3 Platforms and Machine Learning Segmentation
+              <small>IEEE EMBC 2020 Conference (2037)</small>
+            </h3>
+            <p>Texture analysis using improved fractal dimension metrics for CT perfusion imaging.</p>
+          </div>
+        </div>
 
-.research-item {
-  display: flex;
-  gap: 20px;
-  background-color: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: var(--shadow);
-}
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/corm2.png" alt="Pharmacological agent microvascular study" />
+          </div>
+          <div class="research-info">
+            <h3>Quantifying Microvascular Alterations Due to a Pharmacological Agent
+              <small>IEEE EMBC 2020 Conference (2044)</small>
+            </h3>
+            <p>Analyzed microvascular network changes induced by CORM2 using intravital microscopy and network extraction.</p>
+          </div>
+        </div>
 
-.research-image img {
-  width: 360px;
-  height: auto;
-  object-fit: contain;
-  background-color: #ffffff;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-}
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/solar-cell.png" alt="Dynamic color change solar cell" />
+          </div>
+          <div class="research-info">
+            <h3>Dynamic Color‐Changing Solar Cell Based on Pr₂O₃ Characteristics
+              <small>Jun 2019 – Jun 2020</small>
+            </h3>
+            <p>Photochromic solar cell with dynamic color‐changing ability without consuming its own generated energy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.research-info { flex: 1; min-width: 0; }
-.research-info h3 { font-size: 1.05rem; margin-bottom: 8px; color: #222; }
-.research-info small { display: block; font-size: 0.9rem; color: #777; margin-top: 4px; margin-bottom: 8px; }
-.research-info p { font-size: 0.95rem; color: #444; }
+    <!-- ===== Presentations (keep all) ===== -->
+    <section id="presentation" class="section">
+      <h2>Presentations</h2>
+      <ul class="presentation-list">
+        <li class="presentation-item">
+          <h3>Quantifying Microvascular Alterations Due to a Pharmacological Agent
+            <small>IEEE EMBC 2020 Oral Presentation (2044)</small>
+          </h3>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/PyyFHVYs6aU?si=yGAOYTJq1Z6xNfwl"
+              title="EMBC 2020 Oral Presentation"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </li>
 
-/* ===================== Presentation — horizontal scroll (fix widths) ===================== */
-.presentation-list {
-  counter-reset: pres;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  overflow-x: auto;
-  padding: 14px 0;
-  -webkit-overflow-scrolling: touch;
-}
+        <li class="presentation-item">
+          <h3>Fractal Dimension‐Based Texture Analysis of CT Perfusion Imaging
+            <small>IEEE EMBC 2020 Oral Presentation (2037)</small>
+          </h3>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/lTp8WVA8HdM?si=9bxuj4y-IBlk9XsU"
+              title="EMBC 2020 Oral Presentation"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </li>
 
-.presentation-list::-webkit-scrollbar { height: 6px; }
-.presentation-list::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.18); border-radius: 3px; }
+        <li class="presentation-item">
+          <h3>Enhanced Conductivity in LIG‐SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment
+            <small>IEEE MEMS 2024 Poster Presentation (0115)</small>
+          </h3>
+          <div class="presentation-image">
+            <img src="images/austim.png" alt="IEEE MEMS Poster"/>
+          </div>
+        </li>
 
-.presentation-item {
-  counter-increment: pres;
-  flex: 0 0 auto;
-  min-width: 320px;
-  max-width: 420px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-  box-shadow: var(--shadow);
-}
+        <li class="presentation-item">
+          <h3>Enhanced Strain Resistance of Fractal Fiber Laser‐Induced Graphene for Flexible Electrodes
+            <small>IEEE Transducer 2025 Poster Presentation</small>
+          </h3>
+          <div class="presentation-image">
+            <img src="images/trans.jpg" alt="IEEE Trans Poster"/>
+          </div>
+        </li>
 
-.presentation-item h3::before {
-  content: counter(pres) ". ";
-  color: var(--primary);
-  font-weight: 800;
-}
+        <li class="presentation-item">
+          <h3>Enhanced Conductivity in LIG‐SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment
+            <small>WOLIT ’24 Oral Presentation (16)</small>
+          </h3>
+          <div class="presentation-image">
+            <img src="images/WOLIT_conf.png" alt="WOLIT Oral"/>
+          </div>
+        </li>
 
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin: 10px 0;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-}
-.video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  border: 0;
-}
+        <li class="presentation-item">
+          <h3>Enhanced Strain Resistance of Fractal Fiber Laser‐Induced Graphene for Flexible Electrodes
+            <small>MRS 2024 Fall Poster Presentation (EN09.05.16)</small>
+          </h3>
+          <div class="presentation-image">
+            <img src="images/MRS_conf.png" alt="MRS Poster"/>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-.presentation-image { width: 100%; margin: 10px 0; }
-.presentation-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-}
+    <!-- ===== Talks (kept) ===== -->
+    <section id="talks" class="section">
+      <h2>Talks</h2>
+      <ul class="talks-list">
+        <li><span class="talk-date">2026</span><span class="talk-text">UC San Diego — Ph.D. Qualifying Exam Talk (scheduled)</span></li>
+      </ul>
+    </section>
 
-/* ===================== Talks (new) ===================== */
-.talks-list{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.talks-list li{
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 12px;
-  box-shadow: var(--shadow);
-}
-.talk-date{
-  display: inline-block;
-  min-width: 86px;
-  font-weight: 800;
-  color: #333;
-}
-.talk-text{ color: #444; }
+    <!-- ===== Experiences (keep all) ===== -->
+    <section id="experience" class="section">
+      <h2>Experiences &amp; Internships</h2>
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-image"><img src="images/hanit.png" alt="Shenzhen Hanit Industrial Technologies Co." /></div>
+          <div class="exp-info">
+            <h3>Shenzhen Hanit Industrial Technologies Co.<small>Jun 2023 – Oct 2023</small></h3>
+            <ul>
+              <li>Manufactured wearable flexible strain sensors</li>
+              <li>Developed feature extraction algorithms</li>
+              <li>Simultaneously recorded carotid and femoral pulse wave signals</li>
+              <li>Built a compact wearable PWV system</li>
+            </ul>
+          </div>
+        </div>
 
-/* ===================== Experiences & Internships (keep your structure) ===================== */
-.exp-list { display: flex; flex-direction: column; gap: 20px; }
+        <div class="exp-item">
+          <div class="exp-image"><img src="images/vivolight.png" alt="Shenzhen Vivolight Medical Device & Technology Co." /></div>
+          <div class="exp-info">
+            <h3>Shenzhen Vivolight Medical Device &amp; Technology Co.<small>Jun 2020 – Aug 2020</small></h3>
+            <ul>
+              <li>Designed test plans and wrote test cases</li>
+              <li>Led product testing processes to ensure high-quality results</li>
+              <li>Analyzed test outcomes and improved test specifications</li>
+              <li>Participated in requirements, schematics, and PCB reviews</li>
+              <li>Developed the test platform and tools</li>
+            </ul>
+          </div>
+        </div>
 
-.exp-item {
-  display: flex;
-  gap: 20px;
-  background-color: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: var(--shadow);
-}
+        <div class="exp-item">
+          <div class="exp-image"><img src="images/mitacs.png" alt="MITACS Internship" /></div>
+          <div class="exp-info">
+            <h3>MITACS Internship (online)<small>Jan 2020 – Aug 2020</small></h3>
+            <p>
+              Contributed to a neuroscience project using texture analysis to extract microvascular signals and reconstruct 3D images.
+              Presented two papers at EMBC 2020.
+            </p>
+          </div>
+        </div>
 
-.exp-image img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-}
+        <div class="exp-item">
+          <div class="exp-image"><img src="images/nus-ntu.png" alt="Summer School at NUS & NTU" /></div>
+          <div class="exp-info">
+            <h3>Summer School at NUS &amp; NTU, Singapore<small>Jun 2019 – Aug 2019</small></h3>
+            <p>Visited NUS/NTU, attended lectures on semiconductor materials, and participated in academic discussions.</p>
+          </div>
+        </div>
 
-.exp-info { flex: 1; min-width: 0; }
-.exp-info h3 { font-size: 1rem; margin-bottom: 8px; color: #222; }
-.exp-info small { font-size: 0.88rem; color: #666; display:block; margin-top: 4px; }
-.exp-info ul { list-style: disc inside; margin-top: 8px; color: #444; font-size: 0.95rem; }
-.exp-info p { margin-top: 6px; font-size: 0.95rem; color: #444; }
+        <div class="exp-item">
+          <div class="exp-image"><img src="images/hku-hkust-cityu.png" alt="Summer School at HKU, HKUST & CityU" /></div>
+          <div class="exp-info">
+            <h3>Summer School at HKU, HKUST &amp; CityU<small>Jun 2018 – Aug 2018</small></h3>
+            <p>Attended workshops on micromaterials and devices, visited labs, and broadened interdisciplinary research perspective.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* ===================== Cookie Banner ===================== */
-#cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #323232;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  z-index: 200;
-  font-size: 0.95rem;
-}
+  </main>
 
-#cookie-banner p { flex: 1; }
-#cookie-banner .cookie-learn-more { margin-left: 20px; font-size: 0.9rem; color: #ddd; }
+  <!-- ===== Cookie Banner ===== -->
+  <div id="cookie-banner">
+    <p>We use cookies to ensure a smooth browsing experience. By continuing, you agree to our use of cookies.</p>
+    <button id="cookie-accept">Accept</button>
+    <a href="#" class="cookie-learn-more">Learn More</a>
+  </div>
 
-#cookie-banner button {
-  background-color: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-#cookie-banner button:hover { background-color: #005fa3; }
+  <footer id="footer">
+    <p>&copy; 2019–2026 YANRU CHEN</p>
+  </footer>
 
-/* ===================== Footer ===================== */
-#footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 12px 0;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* ===================== Responsive ===================== */
-@media (max-width: 980px){
-  .home-grid{ grid-template-columns: 1fr; }
-  .profile-card{ position: relative; top: 0; }
-  .highlight-grid{ grid-template-columns: 1fr; }
-}
-
-@media (max-width: 768px) {
-  .edu-item,
-  .research-item,
-  .exp-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .edu-image { width: 100%; height: 90px; border-right: none; border-bottom: 1px solid var(--border); }
-  .research-image img { width: 100%; }
-  .nav-menu ul { gap: 8px; }
-
-  #cookie-banner {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-  #cookie-banner .cookie-learn-more { margin-left: 0; }
-}
+  <script src="script.js"></script>
+</body>
+</html>
