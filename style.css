@@ -465,3 +465,195 @@ a:hover {
     margin-left: 0;
   }
 }
+
+/* ===== Layout: Sidebar + Content ===== */
+.header-row { gap: 24px; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 88px; /* header 高度附近 */
+  align-self: start;
+}
+
+.profile-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  margin-bottom: 14px;
+}
+
+.profile-card .name {
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.profile-card .role {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.profile-card .tagline {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.profile-card .meta {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+.profile-card .meta li { margin: 6px 0; }
+
+.profile-card .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+.profile-card .links a {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  background: #fafafa;
+  color: #333;
+  font-size: 0.92rem;
+}
+.profile-card .links a:hover {
+  text-decoration: none;
+  background: #f2f2f2;
+}
+
+/* Content width + section polish */
+.content .section { margin-top: 26px; margin-bottom: 34px; }
+.content .section h2 {
+  border-left: none;
+  padding-left: 0;
+  color: #222;
+  font-size: 1.5rem;
+}
+.content .section h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #e9e9e9;
+  margin-top: 12px;
+}
+
+/* News / bullets */
+.bullet {
+  list-style: none;
+  padding-left: 0;
+}
+.bullet li {
+  margin: 10px 0;
+  color: #333;
+}
+.date {
+  display: inline-block;
+  width: 86px;
+  color: #777;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===== Projects ===== */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.project-media img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.project-body h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.12rem;
+  color: #222;
+}
+.venue { color: #777; font-weight: normal; font-size: 0.95rem; }
+
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid #e3e3e3;
+  background: #fafafa;
+  color: #333;
+  font-size: 0.92rem;
+}
+.pill:hover { text-decoration: none; background: #f2f2f2; }
+.pill.muted {
+  color: #888;
+  background: #f7f7f7;
+}
+
+/* Publications */
+.pub-list {
+  padding-left: 18px;
+}
+.note {
+  color: #777;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* ===== Fix: Presentation section widths (你的旧 CSS 里 width:50% 会显得很怪) ===== */
+.video-wrapper, .presentation-image {
+  width: 100%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; top: auto; }
+  .project-card { grid-template-columns: 1fr; }
+  .project-media img { height: 220px; }
+}
