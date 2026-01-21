@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", function () {
   // Cookie banner
   const banner = document.getElementById("cookie-banner");
@@ -13,44 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Smooth scroll
-  document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
+  // Smooth scroll for nav
+  document.querySelectorAll('.nav a[href^="#"]').forEach(link => {
+    link.addEventListener("click", (e) => {
       e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
+      const id = link.getAttribute("href");
+      const target = document.querySelector(id);
       if (!target) return;
 
-      const header = document.getElementById('header');
-      const headerOffset = header ? header.offsetHeight : 0;
-      const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset - 8;
+      const headerOffset = document.getElementById("topbar")?.offsetHeight || 0;
+      const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset - 10;
 
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      window.scrollTo({ top: y, behavior: "smooth" });
     });
   });
-
-  // Active nav highlight
-  const navLinks = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]'));
-  const sections = navLinks
-    .map(a => document.querySelector(a.getAttribute("href")))
-    .filter(Boolean);
-
-  function setActiveLink() {
-    const header = document.getElementById('header');
-    const headerOffset = header ? header.offsetHeight : 0;
-    const scrollPos = window.scrollY + headerOffset + 20;
-
-    let current = null;
-    for (const sec of sections) {
-      if (sec.offsetTop <= scrollPos) current = sec;
-    }
-
-    navLinks.forEach(a => a.classList.remove("active"));
-    if (current) {
-      const active = navLinks.find(a => a.getAttribute("href") === `#${current.id}`);
-      if (active) active.classList.add("active");
-    }
-  }
-
-  window.addEventListener("scroll", setActiveLink, { passive: true });
-  setActiveLink();
 });

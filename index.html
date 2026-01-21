@@ -1,551 +1,488 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YANRU CHEN – Personal Website</title>
+  <title>Yanru Chen – Personal Website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- ===== Header and Navigation ===== -->
-  <header id="header">
-    <div class="container header-inner">
-      <div class="logo">
-        <h1>YANRU CHEN</h1>
-        <p class="subtitle">Ph.D. Candidate · UC San Diego</p>
+  <!-- ===================== Top Navigation ===================== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-name">YANRU<br/>CHEN</div>
+        <div class="brand-sub">
+          Ph.D. Candidate · UC San Diego
+        </div>
       </div>
 
-      <nav class="nav-menu" aria-label="Primary">
-        <ul>
-          <li><a href="#home">Homepage</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#highlighted">Highlighted</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#presentation">Presentations</a></li>
-          <li><a href="#talks">Talks</a></li>
-          <li><a href="#experience">Experiences</a></li>
-        </ul>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#cv">CV</a>
+        <a href="#education">Educations</a>
+        <a href="#highlighted">Highlighted</a>
+        <a href="#publications">Publications</a>
+        <a href="#presentations">Presentations</a>
+        <a href="#experiences">Experiences</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <!-- ===================== Page Layout ===================== -->
+  <div class="page">
+    <!-- ===================== Left Sidebar ===================== -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img class="avatar" src="images/profile.jpg" alt="Yanru Chen profile photo" />
 
-    <!-- ===== Homepage ===== -->
-    <section id="home" class="section home-grid">
-      <!-- Left: profile -->
-      <aside class="profile-card" aria-label="Profile">
-        <div class="avatar-wrap">
-          <img class="avatar" src="images/profile.jpg" alt="Yanru Chen portrait"
-               onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');" />
-          <div class="avatar-fallback" aria-hidden="true"><span>YC</span></div>
-        </div>
+        <h1 class="name">Yanru Chen</h1>
+        <div class="title">Ph.D. Candidate @ UC San Diego</div>
 
-        <h2 class="profile-name">Yanru Chen</h2>
-        <p class="profile-title">Ph.D. Candidate @ UC San Diego</p>
-
-        <p class="profile-tagline">
+        <p class="tagline">
           Computer Architecture · Processing-in-Memory · In-Storage Processing · LLM · Graph Analytics · SW/HW Co-design
         </p>
 
-        <ul class="profile-meta">
-          <li><span class="meta-k">Location</span><span class="meta-v">San Diego, CA, USA</span></li>
-          <li><span class="meta-k">Email</span><span class="meta-v"><a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a></span></li>
-          <li><span class="meta-k">Phone</span><span class="meta-v">+1 858-412-9248</span></li>
+        <div class="meta">
+          <div class="meta-row">
+            <span class="meta-ico">📍</span>
+            <span>San Diego, CA, USA</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-ico">✉️</span>
+            <a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a>
+          </div>
+        </div>
+
+        <div class="sidebar-links">
+          <!-- 你可以把 href 换成你自己的链接 -->
+          <a class="pill" href="docs/CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+
+          <div class="icon-links">
+            <a href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar">
+              🎓
+            </a>
+            <a href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener" title="LinkedIn">
+              in
+            </a>
+            <!-- 下面这些你没有给链接就先留空，想用就改 -->
+            <a href="#" title="GitHub (set your link)">⌂</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===================== Right Main ===================== -->
+    <main class="main">
+      <!-- About -->
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+          Yanru is a Ph.D. Candidate in Electronic and Computer Engineering at the University of California San Diego (UCSD).
+          She works with
+          <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank" rel="noopener noreferrer">Prof. Tajana Rosing</a>
+          in the
+          <a href="https://seelab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Systems Energy Efficiency Lab (SEELab)</a>.
+          Outside of her academic work, Yanru enjoys singing and won the Audience Favorite Award in Jilin University singer competition.
+        </p>
+      </section>
+
+      <!-- News -->
+      <section id="news" class="section">
+        <h2>🔥 News</h2>
+        <ul class="clean-list">
+          <li><span class="date">2026</span> CHIME — accepted by DATE 2026.</li>
+          <li><span class="date">2026</span> RAPID-Graph — accepted by DATE 2026.</li>
+          <li><span class="date">2026</span> HDDB — submitted to DAC 2026.</li>
         </ul>
+      </section>
 
-        <div class="profile-links" aria-label="External Links">
-          <a class="link-chip" href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-          <a class="link-chip" href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <!-- CV -->
+      <section id="cv" class="section">
+        <h2>Curriculum Vitae</h2>
+        <a class="btn" href="docs/CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <!-- 如果你想加“二维码”入口：把二维码图片放 images/qr.png，然后取消注释下面一行 -->
+        <!-- <div class="hint">QR: <a href="images/qr.png" target="_blank" rel="noopener">Open</a></div> -->
+      </section>
+
+      <!-- Educations -->
+      <section id="education" class="section">
+        <h2>📘 Educations</h2>
+
+        <div class="edu">
+          <div class="edu-item">
+            <img src="images/jlu-logo.png" alt="Jilin University Logo" />
+            <div>
+              <div class="edu-top">
+                <strong>Jilin University</strong>
+                <span class="edu-date">2017 – 2021</span>
+              </div>
+              <div class="edu-desc">B.S. in Electronic Science and Technology</div>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/jlu-logo.png" alt="Jilin University Logo" />
+            <div>
+              <div class="edu-top">
+                <strong>Jilin University</strong>
+                <span class="edu-date">2018 – 2020</span>
+              </div>
+              <div class="edu-desc">B.A. in International Economy and Trade</div>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/thu-logo.png" alt="Tsinghua University Logo" />
+            <div>
+              <div class="edu-top">
+                <strong>Tsinghua University</strong>
+                <span class="edu-date">2021 – 2024</span>
+              </div>
+              <div class="edu-desc">M.S. in Electronic Information</div>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <img src="images/ucsd-logo.png" alt="UCSD Logo" />
+            <div>
+              <div class="edu-top">
+                <strong>University of California, San Diego</strong>
+                <span class="edu-date">2024 – 2027</span>
+              </div>
+              <div class="edu-desc">Ph.D. in Electronic and Computer Engineering</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlighted Projects (保留图片：你要模仿师兄，这部分应该有图) -->
+      <section id="highlighted" class="section">
+        <h2>✨ Highlighted Projects</h2>
+
+        <div class="proj-grid">
+          <article class="proj">
+            <img src="images/proj_chime.png" alt="CHIME project figure" />
+            <div class="proj-body">
+              <div class="proj-title">CHIME</div>
+              <div class="proj-meta">DATE 2026 · Heterogeneous PIM for AI & Graph Reasoning</div>
+              <div class="proj-links">
+                <a href="docs/CHIME.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj">
+            <img src="images/proj_rapidgraph.png" alt="RAPID-Graph project figure" />
+            <div class="proj-body">
+              <div class="proj-title">RAPID-Graph</div>
+              <div class="proj-meta">DATE 2026 · Graph acceleration with PIM</div>
+              <div class="proj-links">
+                <a href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj">
+            <img src="images/proj_hddb.png" alt="HDDB project figure" />
+            <div class="proj-body">
+              <div class="proj-title">HDDB</div>
+              <div class="proj-meta">DAC 2026 submission · HDC / database acceleration</div>
+              <div class="proj-links">
+                <a href="docs/HDDB.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj">
+            <img src="images/proj_gengraph.png" alt="Gen-Graph project figure" />
+            <div class="proj-body">
+              <div class="proj-title">Gen-Graph</div>
+              <div class="proj-meta">TCAD submission · Graph reasoning / traversal</div>
+              <div class="proj-links">
+                <a href="docs/Gen-Graph.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <div class="profile-actions">
-          <a href="docs/CV.pdf" class="button" download>Download CV (PDF)</a>
+        <div class="hint">
+          If your PDF filenames differ, just update the <code>href="docs/..."</code> above.
         </div>
-      </aside>
+      </section>
 
-      <!-- Right: about + news -->
-      <div class="main-panel">
-        <section id="about" class="section section-compact">
-          <h2>About Me</h2>
-          <p>
-            Yanru is a Ph.D. candidate in Electronic and Computer Engineering at the University of California San Diego.
-            She works with
-            <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank" rel="noopener noreferrer">Prof. Tajana Rosing</a>
-            in the
-            <a href="https://seelab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Systems Energy Efficiency Lab (SEELab)</a>.
-            Outside of her academic work, Yanru enjoys singing and won the Audience Favorite Award in Jilin University singer competition.
-          </p>
+      <!-- Publications (按主题分组 + 每条带 PDF/Code 链接；按你要求：不放图片) -->
+      <section id="publications" class="section">
+        <h2>📝 Publications</h2>
 
-          <ul class="contact-info">
-            <li><strong>Email:</strong> <a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a></li>
-            <li><strong>Phone:</strong> +1 858-412-9248</li>
-            <li><strong>Research Areas:</strong> Computer Architecture, Processing-in-memory, In-Storage Processing, LLM, Graph Analytics, SW/HW Co-design</li>
-            <li><strong>Links:</strong>
-              <a href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-              <a href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <div class="pub-group">
+          <h3 class="pub-h3">Processing-in-Memory & Graph / LLM</h3>
+          <ul class="pub-list">
+            <li class="pub-item">
+              <div class="pub-title">CHIME</div>
+              <div class="pub-links">
+                <a href="docs/CHIME.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-title">RAPID-Graph</div>
+              <div class="pub-links">
+                <a href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-title">HDDB</div>
+              <div class="pub-links">
+                <a href="docs/HDDB.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
+            </li>
+            <li class="pub-item">
+              <div class="pub-title">Gen-Graph</div>
+              <div class="pub-links">
+                <a href="docs/Gen-Graph.pdf" target="_blank" rel="noopener">PDF</a>
+                <span class="dot">·</span>
+                <a href="#" title="Add code link">Code</a>
+              </div>
             </li>
           </ul>
-        </section>
+        </div>
 
-        <section id="news" class="section section-compact">
-          <h2>🔥 News</h2>
-          <ul class="news-list">
-            <li><span class="news-date">2026</span> <span class="news-text">CHIME — accepted by DATE 2026.</span></li>
-            <li><span class="news-date">2026</span> <span class="news-text">RAPID-Graph — accepted by DATE 2026.</span></li>
-            <li><span class="news-date">2026</span> <span class="news-text">HDDB — submitted to DAC 2026.</span></li>
+        <div class="pub-group">
+          <h3 class="pub-h3">Wearable Sensors & Materials</h3>
+          <ul class="pub-list">
+            <li class="pub-item">
+              <div class="pub-title">
+                Wearable Acetone Gas Sensor for Measuring Exhaled Breath of Diabetes Patients
+                <span class="pub-venue"> · ACS Advanced Materials & Interfaces, Oct 2024</span>
+              </div>
+              <div class="pub-links">
+                <a href="docs/porous.pdf" target="_blank" rel="noopener">PDF</a>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-title">
+                Enhanced Conductivity in Laser-Induced Graphene–Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and Pulse Wave Velocity Assessment
+                <span class="pub-venue"> · IEEE MEMS 2024 (0115)</span>
+              </div>
+              <div class="pub-links">
+                <a href="docs/PWV.pdf" target="_blank" rel="noopener">PDF</a>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-title">
+                Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes Via Annealing and Plasma Etching
+                <span class="pub-venue"> · (Poster)</span>
+              </div>
+              <div class="pub-links">
+                <a href="docs/Enhanced.pdf" target="_blank" rel="noopener">PDF</a>
+              </div>
+            </li>
           </ul>
-        </section>
-      </div>
-    </section>
-
-    <!-- ===== CV ===== -->
-    <section id="cv" class="section">
-      <h2>Curriculum Vitae</h2>
-      <p><a href="docs/CV.pdf" class="button" download>Download CV (PDF)</a></p>
-    </section>
-
-    <!-- ===== Education ===== -->
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <div class="edu-list">
-        <div class="edu-item">
-          <div class="edu-image"><img src="images/jlu-logo.png" alt="Jilin University Logo" /></div>
-          <div class="edu-info">
-            <h3>Jilin University</h3>
-            <p><span class="edu-duration">2017 – 2021</span><br />B.S. in Electronic Science and Technology</p>
-          </div>
         </div>
 
-        <div class="edu-item">
-          <div class="edu-image"><img src="images/jlu-logo.png" alt="Jilin University Logo" /></div>
-          <div class="edu-info">
-            <h3>Jilin University</h3>
-            <p><span class="edu-duration">2018 – 2020</span><br />B.A. in International Economy and Trade</p>
-          </div>
-        </div>
-
-        <div class="edu-item">
-          <div class="edu-image"><img src="images/thu-logo.png" alt="Tsinghua University Logo" /></div>
-          <div class="edu-info">
-            <h3>Tsinghua University</h3>
-            <p><span class="edu-duration">2021 – 2024</span><br />M.S. in Electronic Information</p>
-          </div>
-        </div>
-
-        <div class="edu-item">
-          <div class="edu-image"><img src="images/ucsd-logo.png" alt="UCSD Logo" /></div>
-          <div class="edu-info">
-            <h3>University of California, San Diego</h3>
-            <p><span class="edu-duration">2024 – 2027 (Expected)</span><br />Ph.D. in Electronic and Computer Engineering</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Highlighted Projects (use your existing proj_*.png) ===== -->
-    <section id="highlighted" class="section">
-      <h2>Highlighted Projects</h2>
-
-      <div class="highlight-grid">
-        <article class="highlight-card">
-          <div class="hc-thumb">
-            <img src="images/proj_chime.png" alt="CHIME thumbnail" />
-          </div>
-          <div class="hc-body">
-            <h3>CHIME <span class="hc-venue">DATE 2026 (Accepted)</span></h3>
-            <p class="hc-desc">Chiplet-based heterogeneous near-memory acceleration for edge multimodal LLM inference.</p>
-            <div class="hc-links">
-              <a class="mini-btn" href="docs/CHIME.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="highlight-card">
-          <div class="hc-thumb">
-            <img src="images/proj_rapidgraph.png" alt="RAPID-Graph thumbnail" />
-          </div>
-          <div class="hc-body">
-            <h3>RAPID-Graph <span class="hc-venue">DATE 2026 (Accepted)</span></h3>
-            <p class="hc-desc">Recursive APSP using processing-in-memory for dynamic programming on large graphs.</p>
-            <div class="hc-links">
-              <a class="mini-btn" href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="highlight-card">
-          <div class="hc-thumb">
-            <img src="images/proj_hddb.png" alt="HDDB thumbnail" />
-          </div>
-          <div class="hc-body">
-            <h3>HDDB <span class="hc-venue">DAC 2026 (Submitted)</span></h3>
-            <p class="hc-desc">In-storage SQL database search using hyperdimensional computing on FeNAND flash.</p>
-            <div class="hc-links">
-              <a class="mini-btn" href="docs/HDDB.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="highlight-card">
-          <div class="hc-thumb">
-            <img src="images/proj_gengraph.png" alt="Gen-Graph thumbnail" />
-          </div>
-          <div class="hc-body">
-            <h3>Gen-Graph <span class="hc-venue">Ongoing</span></h3>
-            <p class="hc-desc">Heterogeneous PIM architectures for scalable AI and graph reasoning (work in progress).</p>
-            <div class="hc-links">
-              <!-- add links when ready -->
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Publications (grouped + small picture + PDF/Code links) ===== -->
-    <section id="publications" class="section">
-      <h2>Publications</h2>
-
-      <div class="pub-group">
-        <h3 class="pub-group-title">🧠 PIM / HDC / Graph & Database</h3>
-
-        <div class="pub-list">
-          <div class="pub-item">
-            <div class="pub-thumb badge" data-label="CHIME"></div>
-            <div class="pub-content">
-              <div class="pub-title">CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference</div>
-              <div class="pub-authors">Yanru Chen*, Runyang Tian*, Yue Pan, Zheyu Li, Weihong Xu, Tajana Rosing†</div>
-              <div class="pub-venue">DATE, 2026. (Accepted)</div>
-              <div class="pub-links">
-                <a class="mini-btn" href="docs/CHIME.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+        <div class="pub-group">
+          <h3 class="pub-h3">Medical Imaging / Microvascular Analysis</h3>
+          <ul class="pub-list">
+            <li class="pub-item">
+              <div class="pub-title">
+                Perfusion Heterogeneity Assessment in Human CT Data Using PM3 Platforms and Machine Learning Segmentation
+                <span class="pub-venue"> · IEEE EMBC 2020 (2037)</span>
               </div>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-thumb badge" data-label="RAPID"></div>
-            <div class="pub-content">
-              <div class="pub-title">RAPID-Graph: Recursive All-Pairs Shortest Paths Using Processing-in-Memory for Dynamic Programming on Graph</div>
-              <div class="pub-authors">Yanru Chen*, Zheyu Li*, Keming Fan, Runyang Tian, John Hsu, Minxuan Zhou, Tajana Rosing†</div>
-              <div class="pub-venue">DATE, 2026. (Accepted)</div>
               <div class="pub-links">
-                <a class="mini-btn" href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a href="docs/FDimension.pdf" target="_blank" rel="noopener">PDF</a>
               </div>
-            </div>
-          </div>
+            </li>
 
-          <div class="pub-item">
-            <div class="pub-thumb badge" data-label="HDDB"></div>
-            <div class="pub-content">
-              <div class="pub-title">HDDB: Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash</div>
-              <div class="pub-authors">Quanling Zhao*, Yanru Chen*, Runyang Tian, Weihong Xu, Tajana Rosing†</div>
-              <div class="pub-venue">Submitted to DAC (Chips to Systems), 2026.</div>
+            <li class="pub-item">
+              <div class="pub-title">
+                Quantifying Microvascular Alterations Due to a Pharmacological Agent
+                <span class="pub-venue"> · IEEE EMBC 2020 (2044)</span>
+              </div>
               <div class="pub-links">
-                <a class="mini-btn" href="docs/HDDB.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                <!-- 你给的是 Quanlifying.pdf（拼写就是你说的那个），我先照连。
+                     如果它不是这篇论文的 PDF，把文件名改掉即可。 -->
+                <a href="docs/Quanlifying.pdf" target="_blank" rel="noopener">PDF</a>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
 
-          <div class="pub-item">
-            <div class="pub-thumb badge" data-label="GEN"></div>
-            <div class="pub-content">
-              <div class="pub-title">Gen-Graph: Heterogeneous PIM Architectures for Scalable AI and Graph Reasoning</div>
-              <div class="pub-authors">Yanru Chen, (collaborators)</div>
-              <div class="pub-venue">Work in progress.</div>
-              <div class="pub-links"></div>
-            </div>
+          <div class="hint">
+            If <code>docs/Quanlifying.pdf</code> is not EMBC2044’s PDF, rename it or update the link.
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="pub-group">
-        <h3 class="pub-group-title">🧪 Wearable / Flexible Electronics / Sensors</h3>
+      <!-- Presentations (保留你原来的所有内容，不删) -->
+      <section id="presentations" class="section">
+        <h2>🎤 Presentations</h2>
 
-        <div class="pub-list">
-          <div class="pub-item">
-            <div class="pub-thumb img">
-              <img src="images/AMI.jpg" alt="AMI thumbnail" />
-            </div>
-            <div class="pub-content">
-              <div class="pub-title">Porous PDMS–ZnO Wearable Gas Sensor for Acetone Biomarker Detection and Breath Analysis</div>
-              <div class="pub-authors">Yanru Chen, (co-authors)</div>
-              <div class="pub-venue">ACS Applied Materials & Interfaces, 2024.</div>
-              <div class="pub-links"></div>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-thumb img">
-              <img src="images/mems.png" alt="MEMS thumbnail" />
-            </div>
-            <div class="pub-content">
-              <div class="pub-title">Enhanced Conductivity in Laser-Induced Graphene–Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment</div>
-              <div class="pub-authors">Yixin Liu*, Yanru Chen*, (co-authors)</div>
-              <div class="pub-venue">IEEE MEMS, 2024. (Poster)</div>
-              <div class="pub-links"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-group">
-        <h3 class="pub-group-title">🩺 Computational Medicine / Biomedical Signal Processing</h3>
-
-        <div class="pub-list">
-          <div class="pub-item">
-            <div class="pub-thumb img">
-              <img src="images/embc2044.jpg" alt="EMBC 2044 thumbnail" />
-            </div>
-            <div class="pub-content">
-              <div class="pub-title">Quantifying microvascular alterations due to a pharmacological agent</div>
-              <div class="pub-authors">Yanru Chen, (co-authors)</div>
-              <div class="pub-venue">IEEE EMBC, 2020. (Oral)</div>
-              <div class="pub-links"></div>
-            </div>
-          </div>
-
-          <div class="pub-item">
-            <div class="pub-thumb img">
-              <img src="images/embc2037.jpg" alt="EMBC 2037 thumbnail" />
-            </div>
-            <div class="pub-content">
-              <div class="pub-title">Fractal Dimension Based Texture Analysis of CT Perfusion Imaging</div>
-              <div class="pub-authors">(authors)</div>
-              <div class="pub-venue">IEEE EMBC, 2020. (Oral)</div>
-              <div class="pub-links"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pub-note">
-        PDFs: put files into <code>docs/</code> and link as <code>docs/xxx.pdf</code>. Thumbnails already use your existing images.
-      </div>
-    </section>
-
-    <!-- ===== Research (keep your original full section) ===== -->
-    <section id="research" class="section">
-      <h2>Research</h2>
-      <div class="research-list">
-        <div class="research-item">
-          <div class="research-image">
-            <img src="images/acetone-sensor.png" alt="Wearable acetone gas sensor" />
-          </div>
-          <div class="research-info">
-            <h3>Wearable Acetone Gas Sensor for Measuring Exhaled Breath of Diabetes Patients
-              <small>ACS Applied Materials & Interfaces, Oct 2024</small>
+        <ul class="presentation-list">
+          <li class="presentation-item">
+            <h3>Quantifying Microvascular Alterations Due to a Pharmacological Agent<br/>
+              <small>IEEE EMBC 2020 Oral Presentation (2044)</small>
             </h3>
-            <p>
-              Semiconductor metal oxide (SMO) gas sensors are low‐cost, real‐time, and long‐lasting but usually need elevated temperatures.
-              We developed a flexible, room‐temperature sensor using UV‐assisted design by embedding ZnO nanoparticles into a PDMS porous framework.
-              An innovative low‐modulus island‐bridge structure allowed 60% stretchability.
-            </p>
-          </div>
-        </div>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/PyyFHVYs6aU?si=yGAOYTJq1Z6xNfwl"
+                title="EMBC 2020 Oral Presentation"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </li>
 
-        <div class="research-item">
-          <div class="research-image">
-            <img src="images/lig-sic.png" alt="LIG-SiC laminated nanosheets" />
-          </div>
-          <div class="research-info">
-            <h3>Enhanced Conductivity in Laser‐Induced Graphene–Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and Pulse Wave Velocity Assessment
-              <small>IEEE MEMS Conference 2024 (0115)</small>
+          <li class="presentation-item">
+            <h3>Fractal Dimension-Based Texture Analysis of CT Perfusion Imaging<br/>
+              <small>IEEE EMBS 2020 Oral Presentation (2037)</small>
             </h3>
-            <p>Novel flexible strain sensor based on LIG–SiC laminated nanosheets with strong stability and accuracy in PWV tests.</p>
-          </div>
-        </div>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/lTp8WVA8HdM?si=9bxuj4y-IBlk9XsU"
+                title="EMBS 2020 Oral Presentation"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </li>
 
-        <div class="research-item">
-          <div class="research-image">
-            <img src="images/pm3-perfusion.png" alt="PM3 platforms perfusion analysis" />
-          </div>
-          <div class="research-info">
-            <h3>Perfusion Heterogeneity Assessment in Human CT Data Using PM3 Platforms and Machine Learning Segmentation
-              <small>IEEE EMBC 2020 Conference (2037)</small>
+          <li class="presentation-item">
+            <h3>Enhanced Conductivity in LIG-SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment<br/>
+              <small>IEEE MEMS 2024 Poster Presentation (0115)</small>
             </h3>
-            <p>Texture analysis using improved fractal dimension metrics for CT perfusion imaging.</p>
-          </div>
-        </div>
+            <div class="presentation-image">
+              <img src="images/austim.png" alt="IEEE MEMS Poster"/>
+            </div>
+          </li>
 
-        <div class="research-item">
-          <div class="research-image">
-            <img src="images/corm2.png" alt="Pharmacological agent microvascular study" />
-          </div>
-          <div class="research-info">
-            <h3>Quantifying Microvascular Alterations Due to a Pharmacological Agent
-              <small>IEEE EMBC 2020 Conference (2044)</small>
+          <li class="presentation-item">
+            <h3>Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes<br/>
+              <small>IEEE Transducer 2025 Poster Presentation</small>
             </h3>
-            <p>Analyzed microvascular network changes induced by CORM2 using intravital microscopy and network extraction.</p>
-          </div>
-        </div>
+            <div class="presentation-image">
+              <img src="images/trans.jpg" alt="IEEE Trans Poster"/>
+            </div>
+          </li>
 
-        <div class="research-item">
-          <div class="research-image">
-            <img src="images/solar-cell.png" alt="Dynamic color change solar cell" />
-          </div>
-          <div class="research-info">
-            <h3>Dynamic Color‐Changing Solar Cell Based on Pr₂O₃ Characteristics
-              <small>Jun 2019 – Jun 2020</small>
+          <li class="presentation-item">
+            <h3>Enhanced Conductivity in LIG-SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment<br/>
+              <small>WOLIT ’24 Oral Presentation (16)</small>
             </h3>
-            <p>Photochromic solar cell with dynamic color‐changing ability without consuming its own generated energy.</p>
+            <div class="presentation-image">
+              <img src="images/WOLIT_conf.png" alt="WOLIT Oral"/>
+            </div>
+          </li>
+
+          <li class="presentation-item">
+            <h3>Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes<br/>
+              <small>MRS 2024 Fall Poster Presentation (EN09.05.16)</small>
+            </h3>
+            <div class="presentation-image">
+              <img src="images/MRS_conf.png" alt="MRS Poster"/>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Experiences -->
+      <section id="experiences" class="section">
+        <h2>🧩 Experiences & Internships</h2>
+
+        <div class="exp-list">
+          <div class="exp-item">
+            <img src="images/hanit.png" alt="Shenzhen Hanit Industrial Technologies Co." />
+            <div>
+              <h3>Shenzhen Hanit Industrial Technologies Co. <small>· Jun 2023 – Oct 2023</small></h3>
+              <ul>
+                <li>Manufactured wearable flexible strain sensors</li>
+                <li>Developed feature extraction algorithms</li>
+                <li>Simultaneously recorded carotid and femoral pulse wave signals</li>
+                <li>Built a compact wearable Pulse Wave Velocity (PWV) system</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <img src="images/vivolight.png" alt="Shenzhen Vivolight Medical Device & Technology Co." />
+            <div>
+              <h3>Shenzhen Vivolight Medical Device & Technology Co. <small>· Jun 2020 – Aug 2020</small></h3>
+              <ul>
+                <li>Designed test plans and wrote test cases</li>
+                <li>Led product testing processes to ensure high-quality results</li>
+                <li>Analyzed test outcomes and improved test specifications</li>
+                <li>Participated in requirements, schematics, and PCB reviews</li>
+                <li>Developed the test platform and tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <img src="images/mitacs.png" alt="MITACS Internship" />
+            <div>
+              <h3>MITACS Internship (online) <small>· Jan 2020 – Aug 2020</small></h3>
+              <p>
+                Through MITACS at University of Western Ontario, I contributed to a neuroscience project using texture analysis to extract microvascular signals from mouse heart videos and reconstructed 3D images—enabling cardiac blood flow heterogeneity diagnosis.
+              </p>
+              <p>
+                Presented two papers at EMBC 2020: “Quantifying Microvascular Alterations Due to a Pharmacological Agent” and “Fractal Dimension-Based Texture Analysis of CT Perfusion Imaging.”
+              </p>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <img src="images/nus-ntu.png" alt="Summer School at NUS & NTU" />
+            <div>
+              <h3>Summer School at NUS & NTU, Singapore <small>· Jun 2019 – Aug 2019</small></h3>
+              <p>
+                Visited School of Mathematical Sciences and School of Electrical & Electronic Engineering at NUS and NTU.
+                Attended lectures on advanced semiconductor materials and had discussions with professors. Experienced Singapore culture.
+              </p>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <img src="images/hku-hkust-cityu.png" alt="Summer School at HKU, HKUST & CityU" />
+            <div>
+              <h3>Summer School at HKU, HKUST & CityU <small>· Jun 2018 – Aug 2018</small></h3>
+              <p>
+                Attended workshops on micromaterials and devices at HKU, HKUST, and CityU.
+                Learned from Prof. Li-Hsing Chen on brain-machine interfaces, visited 5G research labs, and saw MIT Robotics Atlas demonstration.
+                This experience broadened my interdisciplinary research perspective.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ===== Presentations (keep all) ===== -->
-    <section id="presentation" class="section">
-      <h2>Presentations</h2>
-      <ul class="presentation-list">
-        <li class="presentation-item">
-          <h3>Quantifying Microvascular Alterations Due to a Pharmacological Agent
-            <small>IEEE EMBC 2020 Oral Presentation (2044)</small>
-          </h3>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/PyyFHVYs6aU?si=yGAOYTJq1Z6xNfwl"
-              title="EMBC 2020 Oral Presentation"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </li>
+      <!-- Footer -->
+      <footer class="footer">
+        <div>© 2019–2026 Yanru Chen</div>
+      </footer>
+    </main>
+  </div>
 
-        <li class="presentation-item">
-          <h3>Fractal Dimension‐Based Texture Analysis of CT Perfusion Imaging
-            <small>IEEE EMBC 2020 Oral Presentation (2037)</small>
-          </h3>
-          <div class="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/lTp8WVA8HdM?si=9bxuj4y-IBlk9XsU"
-              title="EMBC 2020 Oral Presentation"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-          </div>
-        </li>
-
-        <li class="presentation-item">
-          <h3>Enhanced Conductivity in LIG‐SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment
-            <small>IEEE MEMS 2024 Poster Presentation (0115)</small>
-          </h3>
-          <div class="presentation-image">
-            <img src="images/austim.png" alt="IEEE MEMS Poster"/>
-          </div>
-        </li>
-
-        <li class="presentation-item">
-          <h3>Enhanced Strain Resistance of Fractal Fiber Laser‐Induced Graphene for Flexible Electrodes
-            <small>IEEE Transducer 2025 Poster Presentation</small>
-          </h3>
-          <div class="presentation-image">
-            <img src="images/trans.jpg" alt="IEEE Trans Poster"/>
-          </div>
-        </li>
-
-        <li class="presentation-item">
-          <h3>Enhanced Conductivity in LIG‐SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment
-            <small>WOLIT ’24 Oral Presentation (16)</small>
-          </h3>
-          <div class="presentation-image">
-            <img src="images/WOLIT_conf.png" alt="WOLIT Oral"/>
-          </div>
-        </li>
-
-        <li class="presentation-item">
-          <h3>Enhanced Strain Resistance of Fractal Fiber Laser‐Induced Graphene for Flexible Electrodes
-            <small>MRS 2024 Fall Poster Presentation (EN09.05.16)</small>
-          </h3>
-          <div class="presentation-image">
-            <img src="images/MRS_conf.png" alt="MRS Poster"/>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===== Talks (kept) ===== -->
-    <section id="talks" class="section">
-      <h2>Talks</h2>
-      <ul class="talks-list">
-        <li><span class="talk-date">2026</span><span class="talk-text">UC San Diego — Ph.D. Qualifying Exam Talk (scheduled)</span></li>
-      </ul>
-    </section>
-
-    <!-- ===== Experiences (keep all) ===== -->
-    <section id="experience" class="section">
-      <h2>Experiences &amp; Internships</h2>
-      <div class="exp-list">
-        <div class="exp-item">
-          <div class="exp-image"><img src="images/hanit.png" alt="Shenzhen Hanit Industrial Technologies Co." /></div>
-          <div class="exp-info">
-            <h3>Shenzhen Hanit Industrial Technologies Co.<small>Jun 2023 – Oct 2023</small></h3>
-            <ul>
-              <li>Manufactured wearable flexible strain sensors</li>
-              <li>Developed feature extraction algorithms</li>
-              <li>Simultaneously recorded carotid and femoral pulse wave signals</li>
-              <li>Built a compact wearable PWV system</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-image"><img src="images/vivolight.png" alt="Shenzhen Vivolight Medical Device & Technology Co." /></div>
-          <div class="exp-info">
-            <h3>Shenzhen Vivolight Medical Device &amp; Technology Co.<small>Jun 2020 – Aug 2020</small></h3>
-            <ul>
-              <li>Designed test plans and wrote test cases</li>
-              <li>Led product testing processes to ensure high-quality results</li>
-              <li>Analyzed test outcomes and improved test specifications</li>
-              <li>Participated in requirements, schematics, and PCB reviews</li>
-              <li>Developed the test platform and tools</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-image"><img src="images/mitacs.png" alt="MITACS Internship" /></div>
-          <div class="exp-info">
-            <h3>MITACS Internship (online)<small>Jan 2020 – Aug 2020</small></h3>
-            <p>
-              Contributed to a neuroscience project using texture analysis to extract microvascular signals and reconstruct 3D images.
-              Presented two papers at EMBC 2020.
-            </p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-image"><img src="images/nus-ntu.png" alt="Summer School at NUS & NTU" /></div>
-          <div class="exp-info">
-            <h3>Summer School at NUS &amp; NTU, Singapore<small>Jun 2019 – Aug 2019</small></h3>
-            <p>Visited NUS/NTU, attended lectures on semiconductor materials, and participated in academic discussions.</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <div class="exp-image"><img src="images/hku-hkust-cityu.png" alt="Summer School at HKU, HKUST & CityU" /></div>
-          <div class="exp-info">
-            <h3>Summer School at HKU, HKUST &amp; CityU<small>Jun 2018 – Aug 2018</small></h3>
-            <p>Attended workshops on micromaterials and devices, visited labs, and broadened interdisciplinary research perspective.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== Cookie Banner ===== -->
+  <!-- Cookie Banner (保留你的) -->
   <div id="cookie-banner">
     <p>We use cookies to ensure a smooth browsing experience. By continuing, you agree to our use of cookies.</p>
     <button id="cookie-accept">Accept</button>
     <a href="#" class="cookie-learn-more">Learn More</a>
   </div>
-
-  <footer id="footer">
-    <p>&copy; 2019–2026 YANRU CHEN</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
