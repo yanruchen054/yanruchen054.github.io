@@ -1,500 +1,1138 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yanru Chen – Personal Website</title>
-  <link rel="stylesheet" href="style.css" />
-  <script
-    defer
-    src='https://static.cloudflareinsights.com/beacon.min.js'
-    data-cf-beacon='{"token": "8bad4d162c6649dc98e51d8b0cfb0293"}'>
-  </script>
-</head>
-
-<body>
-  <!-- ===================== Top Navigation ===================== -->
-  <header class="topbar" id="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <div class="brand-name">YANRU<br/>CHEN</div>
-        <div class="brand-sub">
-          Ph.D. Candidate · UC San Diego
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yanru Chen is a UC San Diego ECE Ph.D. candidate researching computer architecture, memory systems, and efficient AI acceleration. Seeking 2027 architecture, performance modeling, and AI systems roles."
+    />
+    <meta name="theme-color" content="#143e3a" />
+    <meta
+      property="og:title"
+      content="Yanru Chen · Computer Architecture & AI Systems"
+    />
+    <meta
+      property="og:description"
+      content="UC San Diego ECE Ph.D. candidate working on memory-centric architectures and efficient AI systems. Anticipated graduation: June 2027."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yanruchen054.github.io/" />
+    <meta
+      property="og:image"
+      content="https://yanruchen054.github.io/images/profile.jpg"
+    />
+    <link rel="canonical" href="https://yanruchen054.github.io/" />
+    <title>Yanru Chen · Computer Architecture & AI Systems</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "8bad4d162c6649dc98e51d8b0cfb0293"}'
+    ></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="topbar">
+      <div class="header-inner">
+        <a class="brand" href="#about" aria-label="Yanru Chen, home"
+          >YC<span class="brand-dot">.</span></a
+        >
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#highlighted">Research</a
+          ><a href="#publications">Publications</a
+          ><a href="#experiences">Experience</a
+          ><a href="#presentations">Talks</a>
+        </nav>
+        <a class="header-contact" href="mailto:yac054@ucsd.edu"
+          >Get in touch <span aria-hidden="true">↗</span></a
+        >
       </div>
-
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#cv">CV</a>
-        <a href="#education">Educations</a>
-        <a href="#highlighted">Highlighted</a>
-        <a href="#publications">Publications</a>
-        <a href="#presentations">Presentations</a>
-        <a href="#experiences">Experiences</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===================== Page Layout ===================== -->
-  <div class="page">
-    <!-- ===================== Left Sidebar ===================== -->
-    <aside class="sidebar">
-      <div class="profile-card">
-        <img class="avatar" src="images/profile.jpg" alt="Yanru Chen profile photo" />
-
-        <h1 class="name">Yanru Chen</h1>
-        <div class="title">Ph.D. Candidate @ UC San Diego</div>
-
-        <p class="tagline">
-          Computer Architecture · Processing-in-Memory · In-Storage Processing · LLM · Graph Analytics · SW/HW Co-design
-        </p>
-
-        <div class="meta">
-          <div class="meta-row">
-            <span class="meta-ico">📍</span>
-            <span>San Diego, CA, USA</span>
+    </header>
+    <main id="main">
+      <section id="about" class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">COMPUTER ARCHITECTURE · AI SYSTEMS</p>
+          <h1>Yanru Chen<span class="name-period">.</span></h1>
+          <p class="hero-subtitle">
+            Building efficient systems for<br class="desktop-break" />
+            intelligent workloads.
+          </p>
+          <p class="hero-description">
+            I’m a Ph.D. candidate in
+            <strong>Electrical and Computer Engineering</strong> at UC San
+            Diego, advised by
+            <a
+              href="https://cseweb.ucsd.edu/~trosing/"
+              target="_blank"
+              rel="noopener"
+              >Tajana Rosing</a
+            >
+            in
+            <a href="https://seelab.ucsd.edu/" target="_blank" rel="noopener"
+              >SEELab</a
+            >. My work brings together computer architecture, memory systems,
+            and hardware–software co-design.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button button-primary"
+              href="docs/Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Industry résumé <span aria-hidden="true">↗</span></a
+            ><a
+              class="button button-secondary"
+              href="docs/CV.pdf"
+              target="_blank"
+              rel="noopener"
+              >Academic CV <span aria-hidden="true">↗</span></a
+            >
           </div>
-          <div class="meta-row">
-            <span class="meta-ico">✉️</span>
-            <a href="mailto:yac054@ucsd.edu">yac054@ucsd.edu</a>
+          <div class="social-links">
+            <a href="mailto:yac054@ucsd.edu">Email</a
+            ><a
+              href="https://scholar.google.com/citations?user=d73n1twAAAAJ&amp;hl=en"
+              target="_blank"
+              rel="noopener"
+              >Google Scholar</a
+            ><a
+              href="https://linkedin.com/in/yanru-chen-b36a691a5"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            ><a
+              href="https://github.com/yanruchen054"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
           </div>
         </div>
-
-        <div class="sidebar-links">
-          <!-- 你可以把 href 换成你自己的链接 -->
-          <a class="pill" href="docs/CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-
-          <div class="icon-links">
-            <a href="https://scholar.google.com/citations?user=d73n1twAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar">
-              🎓
-            </a>
-            <a href="https://linkedin.com/in/yanru-chen-b36a691a5" target="_blank" rel="noopener" title="LinkedIn">
-              in
-            </a>
-            <!-- 下面这些你没有给链接就先留空，想用就改 -->
-            <a href="https://github.com/yanruchen054" title="GitHub">⌂</a>
-          </div>
-        </div>
+        <figure class="hero-portrait">
+          <img
+            src="images/profile.jpg"
+            width="576"
+            height="705"
+            alt="Yanru Chen standing beside a mountain lake"
+            fetchpriority="high"
+          />
+          <figcaption>
+            <span>UC SAN DIEGO</span><span>San Diego, California</span>
+          </figcaption>
+        </figure>
+      </section>
+      <div class="container">
+        <aside class="availability">
+          <span class="availability-label"
+            ><span class="status-dot" aria-hidden="true"></span>OPEN TO 2027
+            OPPORTUNITIES</span
+          >
+          <p>Computer architecture · Performance modeling · AI systems</p>
+          <span class="availability-date"
+            >Anticipated graduation: June 2027</span
+          >
+        </aside>
       </div>
-    </aside>
-
-    <!-- ===================== Right Main ===================== -->
-    <main class="main">
-      <!-- About -->
-      <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-          Yanru is a Ph.D. Candidate in Electronic and Computer Engineering at the University of California San Diego (UCSD).
-          She works with
-          <a href="https://cseweb.ucsd.edu/~trosing/" target="_blank" rel="noopener noreferrer">Prof. Tajana Rosing</a>
-          in the
-          <a href="https://seelab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Systems Energy Efficiency Lab (SEELab)</a>.
-          Outside of her academic work, Yanru enjoys singing and won the Audience Favorite Award in Jilin University singer competition.
-        </p>
-      </section>
-
-      <!-- News -->
-      <section id="news" class="section">
-        <h2>🔥 News</h2>
-        <ul class="news-list">
-          <li><span class="news-date">2026.06</span> Joining SK Hynix this summer as an Emerging Memory AI Infrastructure Intern!</li>
-          <li><span class="news-date">2026.06</span> Received the UCSD CSE Best Doctoral Research Award</li>
-          <li><span class="news-date">2026.05</span> PALUTE — accepted by ISLPED 2026</li>
-          <li><span class="news-date">2026.03</span> Received the DAC 2026 Young Fellow Award</li>
-          <li><span class="news-date">2026.03</span> Passed Ph.D. Qualifying Exam; advanced to Ph.D. Candidate</li>
-          <li><span class="news-date">2026.03</span> GEN-Graph — submitted to IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
-          <li><span class="news-date">2026.02</span> HDDB — accepted by DAC 2026</li>
-          <li><span class="news-date">2025.11</span> CHIME — accepted by DATE 2026</li>
-          <li><span class="news-date">2025.11</span> RAPID-Graph — accepted by DATE 2026</li>
-          <li><span class="news-date">2024.09</span> Awarded Jacobs Fellowship</li>
-        </ul>
-
-      </section>
-
-      <!-- CV -->
-      <section id="cv" class="section">
-        <h2>Curriculum Vitae</h2>
-        <a class="btn" href="docs/CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-        <!-- 如果你想加“二维码”入口：把二维码图片放 images/qr.png，然后取消注释下面一行 -->
-        <!-- <div class="hint">QR: <a href="images/qr.png" target="_blank" rel="noopener">Open</a></div> -->
-      </section>
-
-      <!-- Educations -->
-      <section id="education" class="section">
-        <h2>📘 Educations</h2>
-
-        <div class="edu">
-          <div class="edu-item">
-            <img src="images/jlu-logo.png" alt="Jilin University Logo" />
-            <div>
-              <div class="edu-top">
-                <strong>Jilin University</strong>
-                <span class="edu-date">2017 – 2021</span>
-              </div>
-              <div class="edu-desc">B.S. in Electronic Science and Technology</div>
-            </div>
+      <section
+        class="section container research-intro"
+        aria-labelledby="focus-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">RESEARCH FOCUS</p>
+            <h2 id="focus-title">From memory to intelligence.</h2>
           </div>
-
-          <div class="edu-item">
-            <img src="images/jlu-logo.png" alt="Jilin University Logo" />
-            <div>
-              <div class="edu-top">
-                <strong>Jilin University</strong>
-                <span class="edu-date">2018 – 2020</span>
-              </div>
-              <div class="edu-desc">B.A. in International Economy and Trade</div>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <img src="images/thu-logo.png" alt="Tsinghua University Logo" />
-            <div>
-              <div class="edu-top">
-                <strong>Tsinghua University</strong>
-                <span class="edu-date">2021 – 2024</span>
-              </div>
-              <div class="edu-desc">M.S. in Electronic Information</div>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <img src="images/ucsd-logo.png" alt="UCSD Logo" />
-            <div>
-              <div class="edu-top">
-                <strong>University of California, San Diego</strong>
-                <span class="edu-date">2024 – 2027</span>
-              </div>
-              <div class="edu-desc">Ph.D. in Electronic and Computer Engineering</div>
-            </div>
-          </div>
+          <p class="section-intro">
+            Designing efficient computing systems, with a foundation in devices
+            and a focus on architecture.
+          </p>
+        </div>
+        <div class="focus-grid">
+          <article>
+            <span class="focus-number">01 /</span>
+            <h3>Memory-centric architecture</h3>
+            <p>
+              Processing-in-memory, near-memory computing, and in-storage
+              processing for data-intensive workloads.
+            </p>
+          </article>
+          <article>
+            <span class="focus-number">02 /</span>
+            <h3>Efficient AI & graph computing</h3>
+            <p>
+              LLM inference, graph dynamic programming, hyperdimensional
+              computing, and database acceleration.
+            </p>
+          </article>
+          <article>
+            <span class="focus-number">03 /</span>
+            <h3>Modeling & co-design</h3>
+            <p>
+              Heterogeneous system performance modeling and hardware–software
+              co-design across compute and memory.
+            </p>
+          </article>
         </div>
       </section>
-
-      <!-- Highlighted Projects (保留图片：你要模仿师兄，这部分应该有图) -->
-      <section id="highlighted" class="section">
-        <h2>✨ Highlighted Projects</h2>
-
-        <div class="proj-grid">
-          <article class="proj">
-            <img src="images/proj_chime.png" alt="CHIME project figure" />
-            <div class="proj-body">
-              <div class="proj-title">CHIME</div>
-              <div class="proj-meta">DATE 2026 · Heterogeneous PIM for AI & Graph Reasoning</div>
-              <div class="proj-links">
-                <a href="docs/CHIME.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj">
-            <img src="images/proj_rapidgraph.png" alt="RAPID-Graph project figure" />
-            <div class="proj-body">
-              <div class="proj-title">RAPID-Graph</div>
-              <div class="proj-meta">DATE 2026 · Graph acceleration with PIM</div>
-              <div class="proj-links">
-                <a href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj">
-            <img src="images/proj_hddb.png" alt="HDDB project figure" />
-            <div class="proj-body">
-              <div class="proj-title">HDDB</div>
-              <div class="proj-meta">DAC 2026 · HDC / database acceleration</div>
-              <div class="proj-links">
-                <a href="docs/HDDB.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj">
-            <img src="images/proj_gengraph.png" alt="Gen-Graph project figure" />
-            <div class="proj-body">
-              <div class="proj-title">Gen-Graph</div>
-              <div class="proj-meta">TCAD submission · Graph reasoning / traversal</div>
-              <div class="proj-links">
-                <a href="docs/Gen-Graph.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
-              </div>
-            </div>
-          </article>
+      <section id="highlighted" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECTED RESEARCH</p>
+            <h2>Architectures in action.</h2>
+          </div>
+          <a class="text-link" href="#publications"
+            >All publications <span aria-hidden="true">↓</span></a
+          >
         </div>
-
-        <div class="hint">
-          <!-- If your PDF filenames differ, just update the <code>href="docs/..."</code> above. -->
+        <div class="project-grid">
+          <article class="project-card">
+            <a
+              class="project-image"
+              href="docs/CHIME.pdf"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="images/proj_chime.png"
+                alt="CHIME architecture figure"
+                loading="lazy"
+            /></a>
+            <div class="project-copy">
+              <div class="project-meta">
+                <span>AI acceleration</span><span>DATE 2026</span>
+              </div>
+              <h3>CHIME</h3>
+              <p>
+                Chiplet-based heterogeneous near-memory acceleration for edge
+                multimodal LLM inference.
+              </p>
+              <a
+                class="text-link"
+                href="docs/CHIME.pdf"
+                target="_blank"
+                rel="noopener"
+                >Read paper <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="project-card">
+            <a
+              class="project-image"
+              href="docs/RAPID-Graph.pdf"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="images/proj_rapidgraph.png"
+                alt="RAPID-Graph architecture figure"
+                loading="lazy"
+            /></a>
+            <div class="project-copy">
+              <div class="project-meta">
+                <span>Graph computing</span><span>DATE 2026</span>
+              </div>
+              <h3>RAPID-Graph</h3>
+              <p>
+                Processing-in-memory acceleration of recursive all-pairs
+                shortest paths and graph dynamic programming.
+              </p>
+              <a
+                class="text-link"
+                href="docs/RAPID-Graph.pdf"
+                target="_blank"
+                rel="noopener"
+                >Read paper <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="project-card">
+            <a
+              class="project-image"
+              href="docs/HDDB.pdf"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="images/proj_hddb.png"
+                alt="HDDB architecture figure"
+                loading="lazy"
+            /></a>
+            <div class="project-copy">
+              <div class="project-meta">
+                <span>Memory & storage</span><span>DAC 2026</span>
+              </div>
+              <h3>HDDB</h3>
+              <p>
+                In-storage SQL database search using hyperdimensional computing
+                on ferroelectric NAND flash.
+              </p>
+              <a
+                class="text-link"
+                href="docs/HDDB.pdf"
+                target="_blank"
+                rel="noopener"
+                >Read paper <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
+          <article class="project-card">
+            <a
+              class="project-image"
+              href="docs/Gen-Graph.pdf"
+              target="_blank"
+              rel="noopener"
+              ><img
+                src="images/proj_gengraph.png"
+                alt="GEN-Graph architecture figure"
+                loading="lazy"
+            /></a>
+            <div class="project-copy">
+              <div class="project-meta">
+                <span>Graph computing</span><span>TCAD · Submitted</span>
+              </div>
+              <h3>GEN-Graph</h3>
+              <p>
+                A heterogeneous PIM accelerator for general computational
+                patterns in graph-based dynamic programming.
+              </p>
+              <a
+                class="text-link"
+                href="docs/Gen-Graph.pdf"
+                target="_blank"
+                rel="noopener"
+                >Read paper <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </article>
         </div>
       </section>
-
-      <!-- Publications (按主题分组 + 每条带 PDF/Code 链接；按你要求：不放图片) -->
-      <section id="publications" class="section">
-        <h2>📝 Publications</h2>
-
-        <div class="pub-group">
-          <h3 class="pub-h3">Processing-in-Memory & Graph / LLM</h3>
-          <ul class="pub-list">
-            <li class="pub-item">
-              <div class="pub-title">CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference</div>
-              <div class="pub-links">
-                <a href="docs/CHIME.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
+      <section id="experiences" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">EXPERIENCE</p>
+            <h2>A perspective across the stack.</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">FEB 2025 — PRESENT</div>
+            <div>
+              <p class="role-kicker">UC SAN DIEGO · SEELAB</p>
+              <h3>Graduate Researcher · Computer Architecture</h3>
+              <p>
+                Research in hardware–software co-design, processing-in-memory,
+                in-storage processing, graph analytics, hyperdimensional
+                computing, and databases with Prof. Tajana Rosing.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">JUN — SEP 2026</div>
+            <div>
+              <p class="role-kicker">SK HYNIX</p>
+              <h3>Emerging Memory AI Infrastructure Intern</h3>
+              <p>
+                Worked on heterogeneous AI architecture, memory systems, and
+                system performance modeling.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">SEP 2024 — JAN 2025</div>
+            <div>
+              <p class="role-kicker">
+                UC SAN DIEGO · FLEXIBLE AND PRINTED ELECTRONICS LAB
+              </p>
+              <h3>Graduate Researcher · Flexible Electronics</h3>
+              <p>
+                Worked on memristor fabrication and a multimodal sensing glove,
+                with a focus on MEMS/NEMS fabrication and biomedical signal
+                processing.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">OCT 2021 — JUN 2024</div>
+            <div>
+              <p class="role-kicker">TSINGHUA UNIVERSITY · MEMS LABORATORY</p>
+              <h3>Graduate Researcher · Wearable Sensors</h3>
+              <p>
+                Developed wearable acetone gas sensors for breath analysis and
+                laser-induced graphene flexible strain sensors, combining
+                semiconductor devices, materials, and microfabrication.
+              </p>
+            </div>
+          </article>
+        </div>
+        <details class="earlier-experience">
+          <summary>
+            Earlier engineering experience & academic visits
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div class="exp-list">
+            <div class="exp-item">
+              <img
+                alt="Shenzhen Hanit Industrial Technologies Co."
+                loading="lazy"
+                src="images/hanit.png"
+              />
+              <div>
+                <h3>
+                  Shenzhen Hanit Industrial Technologies Co.
+                  <small>· Jun 2023 – Oct 2023</small>
+                </h3>
+                <ul>
+                  <li>Manufactured wearable flexible strain sensors</li>
+                  <li>Developed feature extraction algorithms</li>
+                  <li>
+                    Simultaneously recorded carotid and femoral pulse wave
+                    signals
+                  </li>
+                  <li>
+                    Built a compact wearable Pulse Wave Velocity (PWV) system
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="exp-item">
+              <img
+                alt="Shenzhen Vivolight Medical Device &amp; Technology Co."
+                loading="lazy"
+                src="images/vivolight.png"
+              />
+              <div>
+                <h3>
+                  Shenzhen Vivolight Medical Device &amp; Technology Co.
+                  <small>· Apr 2021 – May 2021</small>
+                </h3>
+                <p>
+                  Algorithm Intern · Department of Algorithm. Developed OCT
+                  imaging methods integrating near-infrared spectroscopy with
+                  machine learning for lipid imaging.
+                </p>
+                <ul>
+                  <li>Designed test plans and wrote test cases</li>
+                  <li>
+                    Led product testing processes to ensure high-quality results
+                  </li>
+                  <li>
+                    Analyzed test outcomes and improved test specifications
+                  </li>
+                  <li>
+                    Participated in requirements, schematics, and PCB reviews
+                  </li>
+                  <li>Developed the test platform and tools</li>
+                </ul>
+              </div>
+            </div>
+            <div class="exp-item">
+              <img
+                alt="MITACS Internship"
+                loading="lazy"
+                src="images/mitacs.png"
+              />
+              <div>
+                <h3>
+                  MITACS Internship (online)
+                  <small>· Jan 2020 – Aug 2020</small>
+                </h3>
+                <p>
+                  Through MITACS at University of Western Ontario, I contributed
+                  to a neuroscience project using texture analysis to extract
+                  microvascular signals from mouse heart videos and
+                  reconstructed 3D images—enabling cardiac blood flow
+                  heterogeneity diagnosis.
+                </p>
+                <p>
+                  Presented two papers at EMBC 2020: “Quantifying Microvascular
+                  Alterations Due to a Pharmacological Agent” and “Fractal
+                  Dimension-Based Texture Analysis of CT Perfusion Imaging.”
+                </p>
+              </div>
+            </div>
+            <div class="exp-item">
+              <img
+                alt="Summer School at NUS &amp; NTU"
+                loading="lazy"
+                src="images/nus-ntu.png"
+              />
+              <div>
+                <h3>
+                  Summer School at NUS &amp; NTU, Singapore
+                  <small>· Jun 2019 – Aug 2019</small>
+                </h3>
+                <p>
+                  Visited School of Mathematical Sciences and School of
+                  Electrical &amp; Electronic Engineering at NUS and NTU.
+                  Attended lectures on advanced semiconductor materials and had
+                  discussions with professors. Experienced Singapore culture.
+                </p>
+              </div>
+            </div>
+            <div class="exp-item">
+              <img
+                alt="Summer School at HKU, HKUST &amp; CityU"
+                loading="lazy"
+                src="images/hku-hkust-cityu.png"
+              />
+              <div>
+                <h3>
+                  Summer School at HKU, HKUST &amp; CityU
+                  <small>· Jun 2018 – Aug 2018</small>
+                </h3>
+                <p>
+                  Attended workshops on micromaterials and devices at HKU,
+                  HKUST, and CityU. Learned from Prof. Li-Hsing Chen on
+                  brain-machine interfaces, visited 5G research labs, and saw
+                  MIT Robotics Atlas demonstration. This experience broadened my
+                  interdisciplinary research perspective.
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+      </section>
+      <section id="publications" class="section publication-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PUBLICATIONS</p>
+              <h2>Research, in print.</h2>
+            </div>
+            <a
+              class="text-link"
+              href="https://scholar.google.com/citations?user=d73n1twAAAAJ&amp;hl=en"
+              target="_blank"
+              rel="noopener"
+              >Google Scholar <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div
+            class="publication-filters"
+            role="group"
+            aria-label="Filter publications by research area"
+          >
+            <button type="button" data-filter="all" aria-pressed="true">
+              All <span>15</span></button
+            ><button
+              type="button"
+              data-filter="architecture"
+              aria-pressed="false"
+            >
+              Architecture & AI <span>5</span></button
+            ><button type="button" data-filter="devices" aria-pressed="false">
+              Devices & sensing <span>8</span></button
+            ><button type="button" data-filter="imaging" aria-pressed="false">
+              Medical imaging <span>2</span>
+            </button>
+          </div>
+          <p
+            id="publication-count"
+            class="publication-count"
+            aria-live="polite"
+          >
+            Showing all 15 publications and manuscripts. * Equal contribution.
+          </p>
+          <ul class="publication-list">
+            <li class="publication" data-category="architecture">
+              <div class="publication-meta">
+                <span>2026</span><span>ISLPED</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  PALUTE: Processing-In-Memory Acceleration via Lookup Table for
+                  Edge LLM Inference
+                </h3>
+                <p>
+                  Runyang Tian, <strong>Yanru Chen</strong>, Weihong Xu, and
+                  Tajana Rosing
+                </p>
               </div>
             </li>
-            <li class="pub-item">
-              <div class="pub-title">RAPID-Graph: Recursive All-Pairs Shortest Paths Using Processing-in-Memory for Dynamic Programming on Graphs</div>
-              <div class="pub-links">
-                <a href="docs/RAPID-Graph.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
+            <li class="publication" data-category="architecture">
+              <div class="publication-meta">
+                <span>2026</span><span>DAC</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  HDDB: Efficient In-Storage SQL Database Search Using
+                  Hyperdimensional Computing on Ferroelectric NAND Flash
+                </h3>
+                <p>
+                  Quanling Zhao*, <strong>Yanru Chen</strong>*, Runyang Tian,
+                  Sumukh Pinge, Weihong Xu, Augusto Vega, Steven Holmes, Saransh
+                  Gupta, and Tajana Rosing
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/HDDB.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read HDDB: Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="architecture">
+              <div class="publication-meta">
+                <span>2026</span><span>DATE</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  RAPID-Graph: Recursive All-Pairs Shortest Paths Using
+                  Processing-in-Memory for Dynamic Programming on Graphs
+                </h3>
+                <p>
+                  <strong>Yanru Chen</strong>*, Zheyu Li*, Keming Fan, Runyang
+                  Tian, John Hsu, Weihong Xu, Minxuan Zhou, and Tajana Rosing
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/RAPID-Graph.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read RAPID-Graph: Recursive All-Pairs Shortest Paths Using Processing-in-Memory for Dynamic Programming on Graphs (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="architecture">
+              <div class="publication-meta">
+                <span>2026</span><span>DATE</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration
+                  for Edge Multimodal LLM Inference
+                </h3>
+                <p>
+                  <strong>Yanru Chen</strong>*, Runyang Tian*, Yue Pan, Zheyu
+                  Li, Weihong Xu, and Tajana Rosing
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/CHIME.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="architecture">
+              <div class="publication-meta">
+                <span>Submitted</span><span>IEEE TCAD</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  GEN-Graph: Heterogeneous PIM Accelerator for General
+                  Computational Patterns in Graph-based Dynamic Programming
+                </h3>
+                <p>
+                  <strong>Yanru Chen</strong>, Runyang Tian, Zheyu Li, Mahbod
+                  Afarin, Weihong Xu, and Tajana Rosing
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/Gen-Graph.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read GEN-Graph: Heterogeneous PIM Accelerator for General Computational Patterns in Graph-based Dynamic Programming (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2025</span><span>Transducers</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Enhanced Strain Resistance of Fractal Fiber Laser-Induced
+                  Graphene for Flexible Electrodes Via Annealing and Plasma
+                  Etching
+                </h3>
+                <p>
+                  <strong>Yanru Chen</strong>, Jiaqi Liu, Yixin Liu, and Min
+                  Zhang
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/Enhanced.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes Via Annealing and Plasma Etching (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2025 · Preprint</span><span>SSRN 5208743</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Low-Cost Spin-Coating Process for SnO2-Based Memristors:
+                  Comparative Study of Different Solvent Systems and Device
+                  Performance
+                </h3>
+                <p><strong>Yanru Chen</strong></p>
               </div>
             </li>
-            <li class="pub-item">
-              <div class="pub-title">HDDB: Efficient In-Storage SQL Database Search Using Hyperdimensional Computing on Ferroelectric NAND Flash</div>
-              <div class="pub-links">
-                <a href="docs/HDDB.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2025</span><span>Lab on a Chip</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Trapping nanoscale particles via quasi-Scholte mode in
+                  acoustofluidics
+                </h3>
+                <p>
+                  Jiaqi Liu, Yuan Yu, Rujun Zhang, <strong>Yanru Chen</strong>,
+                  Yanlong Guo, Yi Zhang, Ran Tao, Jing-Ting Luo, Hairong Zheng,
+                  Pingfa Feng, and Min Zhang
+                </p>
               </div>
             </li>
-            <li class="pub-item">
-              <div class="pub-title">GEN-Graph: A Heterogeneous PIM Architecture for Diverse Computational Patterns in Graph-based Dynamic Programming</div>
-              <div class="pub-links">
-                <a href="docs/Gen-Graph.pdf" target="_blank" rel="noopener">PDF</a>
-                <!-- <span class="dot">·</span>
-                <a href="#" title="Add code link">Code</a> -->
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2025</span><span>Research</span>
               </div>
+              <div class="publication-main">
+                <h3>
+                  Emotional and Directional Enabled Programmable Flexible Haptic
+                  Interface for Enhanced Cognition in Disabled Community
+                </h3>
+                <p>
+                  Yuhan Liu, Liuyang Han, Siqi Lv, Tao Jiang, Mingkai Duan,
+                  Hanyu Guo, Yuzhen Li, Qisen Xie, <strong>Yanru Chen</strong>,
+                  Dongkai Wang, and Min Zhang
+                </p>
+              </div>
+            </li>
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2025</span><span>Advanced Healthcare Materials</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Kirigami-Inspired Stretchable Piezoelectret Sensor for
+                  Analysis and Assessment of Parkinson’s Tremor
+                </h3>
+                <p>
+                  Qisen Xie, Liuyang Han, Jie Liu, Wenjie Zhang, Liuyan Zhao,
+                  Yuhan Liu, <strong>Yanru Chen</strong>, Yuzhen Li, Qian Zhou,
+                  Ying Dong, and Min Zhang
+                </p>
+              </div>
+            </li>
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2024</span
+                ><span>ACS Applied Materials &amp; Interfaces</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Porous PDMS–ZnO Wearable Gas Sensor for Acetone Biomarker
+                  Detection and Breath Analysis
+                </h3>
+                <p>
+                  <strong>Yanru Chen</strong>, Yixin Liu, Jiaqi Liu, Yuzhen Li,
+                  Yuhan Liu, Wenjie Zhang, Liuyang Han, Dongkai Wang, Shuhong
+                  Cao, Hanxiao Liu, and Min Zhang
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/porous.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read Porous PDMS–ZnO Wearable Gas Sensor for Acetone Biomarker Detection and Breath Analysis (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2024</span><span>IEEE MEMS</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Enhanced Electrical Conductivity in Laser-Induced
+                  Graphene-Silicon Carbide Laminated Nanosheets for Flexible
+                  Strain Sensors and Pulse Wave Velocity Assessment
+                </h3>
+                <p>
+                  Yixin Liu*, <strong>Yanru Chen</strong>*, Zhibiao Wang, and
+                  Min Zhang
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/PWV.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read Enhanced Electrical Conductivity in Laser-Induced Graphene-Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and Pulse Wave Velocity Assessment (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="devices">
+              <div class="publication-meta">
+                <span>2024</span><span>IEEE Sensors Journal</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Simultaneously encapsulation and formation of PDMS-MWCNTs
+                  composites for multi-directional microchannel force sensors
+                </h3>
+                <p>
+                  Yuzhen Li, Yunfei Wang, Yixin Liu, Yuhan Liu, Liuyang Han,
+                  <strong>Yanru Chen</strong>, Juntian Qu, Puxiang Lai, and
+                  Xiang Qian
+                </p>
+              </div>
+            </li>
+            <li class="publication" data-category="imaging">
+              <div class="publication-meta">
+                <span>2020</span><span>IEEE EMBC</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Quantifying microvascular alterations due to a pharmacological
+                  agent
+                </h3>
+                <p>
+                  <strong>Yanru Chen</strong>, Sanjay R. Kharche, Yan Min Zhang,
+                  G. H. Janssen, and Christopher W. McIntyre
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/Qualifying.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read Quantifying microvascular alterations due to a pharmacological agent (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
+            </li>
+            <li class="publication" data-category="imaging">
+              <div class="publication-meta">
+                <span>2020</span><span>IEEE EMBC</span>
+              </div>
+              <div class="publication-main">
+                <h3>
+                  Fractal Dimension Based Texture Analysis of CT Perfusion
+                  Imaging
+                </h3>
+                <p>
+                  Sanjay R. Kharche, <strong>Yanru Chen</strong>, and
+                  Christopher W. McIntyre
+                </p>
+              </div>
+              <a
+                class="paper-link"
+                href="docs/FDimension.pdf"
+                target="_blank"
+                rel="noopener"
+                aria-label="Read Fractal Dimension Based Texture Analysis of CT Perfusion Imaging (PDF)"
+                >PDF <span aria-hidden="true">↗</span></a
+              >
             </li>
           </ul>
         </div>
-
-        <div class="pub-group">
-          <h3 class="pub-h3">Wearable Sensors & Materials</h3>
-          <ul class="pub-list">
-            <li class="pub-item">
-              <div class="pub-title">
-                Wearable Acetone Gas Sensor for Measuring Exhaled Breath of Diabetes Patients
-                <span class="pub-venue"> · ACS Advanced Materials & Interfaces, Oct 2024</span>
-              </div>
-              <div class="pub-links">
-                <a href="docs/porous.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </li>
-
-            <li class="pub-item">
-              <div class="pub-title">
-                Enhanced Conductivity in Laser-Induced Graphene–Silicon Carbide Laminated Nanosheets for Flexible Strain Sensors and Pulse Wave Velocity Assessment
-                <span class="pub-venue"> · IEEE MEMS 2024 (0115)</span>
-              </div>
-              <div class="pub-links">
-                <a href="docs/PWV.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </li>
-
-            <li class="pub-item">
-              <div class="pub-title">
-                Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes Via Annealing and Plasma Etching
-                <span class="pub-venue"> · (Poster)</span>
-              </div>
-              <div class="pub-links">
-                <a href="docs/Enhanced.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pub-group">
-          <h3 class="pub-h3">Medical Imaging / Microvascular Analysis</h3>
-          <ul class="pub-list">
-            <li class="pub-item">
-              <div class="pub-title">
-                Perfusion Heterogeneity Assessment in Human CT Data Using PM3 Platforms and Machine Learning Segmentation
-                <span class="pub-venue"> · IEEE EMBC 2020 (2037)</span>
-              </div>
-              <div class="pub-links">
-                <a href="docs/FDimension.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </li>
-
-            <li class="pub-item">
-              <div class="pub-title">
-                Quantifying Microvascular Alterations Due to a Pharmacological Agent
-                <span class="pub-venue"> · IEEE EMBC 2020 (2044)</span>
-              </div>
-              <div class="pub-links">
-                <a href="docs/Qualifying.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </li>
-          </ul>
-
-          <div class="hint">
-            <!-- If <code>docs/Qualifying.pdf</code> is not EMBC2044’s PDF, rename it or update the link. -->
+      </section>
+      <section id="education" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">EDUCATION</p>
+            <h2>Foundations & formation.</h2>
           </div>
         </div>
+        <div class="education-list">
+          <article class="education-item">
+            <img src="images/ucsd-logo.png" alt="" loading="lazy" />
+            <div>
+              <h3>University of California San Diego</h3>
+              <p>Ph.D. in Electrical and Computer Engineering</p>
+              <span
+                >Advisor: Tajana Rosing · Advanced to candidacy, March
+                2026</span
+              >
+            </div>
+            <time>2024 — June 2027<br /><span>Anticipated</span></time>
+          </article>
+          <article class="education-item">
+            <img src="images/thu-logo.png" alt="" loading="lazy" />
+            <div>
+              <h3>Tsinghua University</h3>
+              <p>M.S. in Electronic Information · Intelligent Manufacturing</p>
+              <span>GPA: 3.78 / 4.0</span>
+            </div>
+            <time>2021 — 2024</time>
+          </article>
+          <article class="education-item">
+            <img src="images/jlu-logo.png" alt="" loading="lazy" />
+            <div>
+              <h3>Jilin University</h3>
+              <p>B.E. in Electronic Science and Technology · College Honors</p>
+              <span>GPA: 3.53 / 4.0 · Rank: 6 / 108</span>
+              <p class="second-degree">
+                B.A. in International Economy and Trade
+                <span>· 2018 — 2020</span>
+              </p>
+            </div>
+            <time>2017 — 2021</time>
+          </article>
+        </div>
       </section>
-
-      <!-- Presentations (保留你原来的所有内容，不删) -->
-      <section id="presentations" class="section">
-        <h2>🎤 Presentations</h2>
-
+      <section id="news" class="section container news-awards">
+        <div>
+          <p class="eyebrow">LATEST UPDATES</p>
+          <h2>News & milestones.</h2>
+          <ul class="news-list">
+            <li>
+              <time>2026.09</time
+              ><span
+                >Completed my summer internship at SK hynix, working on
+                heterogeneous AI architecture and memory-system performance
+                modeling.</span
+              >
+            </li>
+            <li>
+              <time>2026.06</time
+              ><span>Received the UCSD CSE Best Doctoral Research Award.</span>
+            </li>
+            <li>
+              <time>2026.05</time><span>PALUTE accepted to ISLPED 2026.</span>
+            </li>
+            <li>
+              <time>2026.03</time><span>Named a DAC 2026 Young Fellow.</span>
+            </li>
+            <li>
+              <time>2026.03</time
+              ><span
+                >Passed my Ph.D. qualifying exam and advanced to
+                candidacy.</span
+              >
+            </li>
+            <li>
+              <time>2026.03</time
+              ><span
+                >GEN-Graph submitted to IEEE Transactions on Computer-Aided
+                Design of Integrated Circuits and Systems (TCAD).</span
+              >
+            </li>
+            <li><time>2026.02</time><span>HDDB accepted to DAC 2026.</span></li>
+            <li>
+              <time>2025.11</time
+              ><span>CHIME and RAPID-Graph accepted to DATE 2026.</span>
+            </li>
+            <li>
+              <time>2024.09</time
+              ><span>Awarded the Jacobs Fellowship at UC San Diego.</span>
+            </li>
+          </ul>
+        </div>
+        <aside class="awards">
+          <p class="eyebrow">RECOGNITION</p>
+          <h3>Selected honors</h3>
+          <ul>
+            <li>
+              <span>2026</span>
+              <div>UCSD CSE Best Doctoral Research Award</div>
+            </li>
+            <li>
+              <span>2026</span>
+              <div>DAC Young Fellow</div>
+            </li>
+            <li>
+              <span>2024</span>
+              <div>Jacobs Fellowship<br /><small>UC San Diego</small></div>
+            </li>
+            <li>
+              <span>2024</span>
+              <div>
+                2nd Best Oral Presentation<br /><small
+                  >Workshop on Learning and Information Theory</small
+                >
+              </div>
+            </li>
+            <li>
+              <span>2021</span>
+              <div>
+                Outstanding Undergraduate Graduation Project<br /><small
+                  >Jilin University</small
+                >
+              </div>
+            </li>
+            <li>
+              <span>2018–21</span>
+              <div>
+                Excellent Student of the College · Top 5%<br /><small
+                  >Jilin University</small
+                >
+              </div>
+            </li>
+            <li>
+              <span>2020</span>
+              <div>MITACS Globalink Research Internship Award</div>
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section id="presentations" class="section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PRESENTATIONS</p>
+            <h2>Sharing the work.</h2>
+          </div>
+          <p class="section-intro">
+            Oral presentations and posters across computing, sensing, and
+            biomedical research.
+          </p>
+        </div>
         <ul class="presentation-list">
           <li class="presentation-item">
-            <h3>Quantifying Microvascular Alterations Due to a Pharmacological Agent<br/>
+            <h3>
+              Quantifying Microvascular Alterations Due to a Pharmacological
+              Agent<br />
               <small>IEEE EMBC 2020 Oral Presentation (2044)</small>
             </h3>
             <div class="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/PyyFHVYs6aU?si=yGAOYTJq1Z6xNfwl"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube-nocookie.com/embed/PyyFHVYs6aU?si=yGAOYTJq1Z6xNfwl"
                 title="EMBC 2020 Oral Presentation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              ></iframe>
             </div>
           </li>
-
           <li class="presentation-item">
-            <h3>Fractal Dimension-Based Texture Analysis of CT Perfusion Imaging<br/>
-              <small>IEEE EMBS 2020 Oral Presentation (2037)</small>
+            <h3>
+              Fractal Dimension-Based Texture Analysis of CT Perfusion
+              Imaging<br />
+              <small>IEEE EMBC 2020 Oral Presentation (2037)</small>
             </h3>
             <div class="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/lTp8WVA8HdM?si=9bxuj4y-IBlk9XsU"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube-nocookie.com/embed/lTp8WVA8HdM?si=9bxuj4y-IBlk9XsU"
                 title="EMBS 2020 Oral Presentation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+              ></iframe>
             </div>
           </li>
-
           <li class="presentation-item">
-            <h3>Enhanced Conductivity in LIG-SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment<br/>
+            <h3>
+              Enhanced Conductivity in LIG-SiC Laminated Nanosheets for Flexible
+              Strain Sensors and PWV Assessment<br />
               <small>IEEE MEMS 2024 Poster Presentation (0115)</small>
             </h3>
             <div class="presentation-image">
-              <img src="images/austim.png" alt="IEEE MEMS Poster"/>
+              <img
+                alt="IEEE MEMS Poster"
+                loading="lazy"
+                src="images/austim.png"
+              />
             </div>
           </li>
-
           <li class="presentation-item">
-            <h3>Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes<br/>
-              <small>IEEE Transducer 2025 Poster Presentation</small>
+            <h3>
+              Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene
+              for Flexible Electrodes<br />
+              <small>Transducers 2025 Poster Presentation</small>
             </h3>
             <div class="presentation-image">
-              <img src="images/trans.jpg" alt="IEEE Trans Poster"/>
+              <img
+                alt="IEEE Trans Poster"
+                loading="lazy"
+                src="images/trans.jpg"
+              />
             </div>
           </li>
-
           <li class="presentation-item">
-            <h3>Enhanced Conductivity in LIG-SiC Laminated Nanosheets for Flexible Strain Sensors and PWV Assessment<br/>
+            <h3>
+              Enhanced Conductivity in LIG-SiC Laminated Nanosheets for Flexible
+              Strain Sensors and PWV Assessment<br />
               <small>WOLIT ’24 Oral Presentation (16)</small>
             </h3>
             <div class="presentation-image">
-              <img src="images/WOLIT_conf.png" alt="WOLIT Oral"/>
+              <img
+                alt="WOLIT Oral"
+                loading="lazy"
+                src="images/WOLIT_conf.png"
+              />
             </div>
           </li>
-
           <li class="presentation-item">
-            <h3>Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene for Flexible Electrodes<br/>
+            <h3>
+              Enhanced Strain Resistance of Fractal Fiber Laser-Induced Graphene
+              for Flexible Electrodes<br />
               <small>MRS 2024 Fall Poster Presentation (EN09.05.16)</small>
             </h3>
             <div class="presentation-image">
-              <img src="images/MRS_conf.png" alt="MRS Poster"/>
+              <img alt="MRS Poster" loading="lazy" src="images/MRS_conf.png" />
             </div>
           </li>
         </ul>
       </section>
-
-      <!-- Experiences -->
-      <section id="experiences" class="section">
-        <h2>🧩 Experiences & Internships</h2>
-
-        <div class="exp-list">
-          <div class="exp-item">
-            <img src="images/hanit.png" alt="Shenzhen Hanit Industrial Technologies Co." />
-            <div>
-              <h3>Shenzhen Hanit Industrial Technologies Co. <small>· Jun 2023 – Oct 2023</small></h3>
-              <ul>
-                <li>Manufactured wearable flexible strain sensors</li>
-                <li>Developed feature extraction algorithms</li>
-                <li>Simultaneously recorded carotid and femoral pulse wave signals</li>
-                <li>Built a compact wearable Pulse Wave Velocity (PWV) system</li>
-              </ul>
-            </div>
+      <section id="cv" class="contact-section">
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow">LET’S CONNECT</p>
+            <h2>Building what comes next.</h2>
+            <p>
+              I’m exploring full-time opportunities in computer architecture,
+              performance modeling, and AI systems for 2027.
+            </p>
+            <a class="contact-email" href="mailto:yac054@ucsd.edu"
+              >yac054@ucsd.edu <span aria-hidden="true">↗</span></a
+            >
           </div>
-
-          <div class="exp-item">
-            <img src="images/vivolight.png" alt="Shenzhen Vivolight Medical Device & Technology Co." />
-            <div>
-              <h3>Shenzhen Vivolight Medical Device & Technology Co. <small>· Jun 2020 – Aug 2020</small></h3>
-              <ul>
-                <li>Designed test plans and wrote test cases</li>
-                <li>Led product testing processes to ensure high-quality results</li>
-                <li>Analyzed test outcomes and improved test specifications</li>
-                <li>Participated in requirements, schematics, and PCB reviews</li>
-                <li>Developed the test platform and tools</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <img src="images/mitacs.png" alt="MITACS Internship" />
-            <div>
-              <h3>MITACS Internship (online) <small>· Jan 2020 – Aug 2020</small></h3>
-              <p>
-                Through MITACS at University of Western Ontario, I contributed to a neuroscience project using texture analysis to extract microvascular signals from mouse heart videos and reconstructed 3D images—enabling cardiac blood flow heterogeneity diagnosis.
-              </p>
-              <p>
-                Presented two papers at EMBC 2020: “Quantifying Microvascular Alterations Due to a Pharmacological Agent” and “Fractal Dimension-Based Texture Analysis of CT Perfusion Imaging.”
-              </p>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <img src="images/nus-ntu.png" alt="Summer School at NUS & NTU" />
-            <div>
-              <h3>Summer School at NUS & NTU, Singapore <small>· Jun 2019 – Aug 2019</small></h3>
-              <p>
-                Visited School of Mathematical Sciences and School of Electrical & Electronic Engineering at NUS and NTU.
-                Attended lectures on advanced semiconductor materials and had discussions with professors. Experienced Singapore culture.
-              </p>
-            </div>
-          </div>
-
-          <div class="exp-item">
-            <img src="images/hku-hkust-cityu.png" alt="Summer School at HKU, HKUST & CityU" />
-            <div>
-              <h3>Summer School at HKU, HKUST & CityU <small>· Jun 2018 – Aug 2018</small></h3>
-              <p>
-                Attended workshops on micromaterials and devices at HKU, HKUST, and CityU.
-                Learned from Prof. Li-Hsing Chen on brain-machine interfaces, visited 5G research labs, and saw MIT Robotics Atlas demonstration.
-                This experience broadened my interdisciplinary research perspective.
-              </p>
-            </div>
+          <div class="contact-actions">
+            <a
+              class="button button-light"
+              href="docs/Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Industry résumé <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              href="docs/CV.pdf"
+              target="_blank"
+              rel="noopener"
+              >Academic CV <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
       </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div>© 2019–2026 Yanru Chen</div>
-      </footer>
     </main>
-  </div>
-
-  <!-- Cookie Banner (保留你的) -->
-  <div id="cookie-banner">
-    <p>We use cookies to ensure a smooth browsing experience. By continuing, you agree to our use of cookies.</p>
-    <button id="cookie-accept">Accept</button>
-    <a href="#" class="cookie-learn-more">Learn More</a>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <footer class="container site-footer">
+      <div>© 2019–2026 Yanru Chen</div>
+      <p>
+        Beyond research: singing, and a Jilin University Audience Favorite
+        Award.
+      </p>
+      <a href="#about">Back to top ↑</a>
+    </footer>
+  </body>
 </html>
